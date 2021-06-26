@@ -12,9 +12,9 @@ namespace ThucTapCM
 {
     public partial class HoaDonBanHang : Form
     {
-        public HoaDonBanHang()
+       /* public HoaDonBanHang()
         {
             InitializeComponent();
-        }
+        }*/
     }
 }

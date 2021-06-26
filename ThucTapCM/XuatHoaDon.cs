@@ -30,9 +30,9 @@ namespace ThucTapCM
             // TODO: This line of code loads data into the 'DOANCHUYENMON7DataSet3.areporthdx' table. You can move, or remove it, as needed.
             //this.areporthdxTableAdapter.Fill(this.DOANCHUYENMON7DataSet3.areporthdx);
             // TODO: This line of code loads data into the 'DOANCHUYENMON1DataSet.SanPham' table. You can move, or remove it, as needed.
-            this.SanPhamTableAdapter.Fill(this.DOANCHUYENMON1DataSet.SanPham);
+         //   this.SanPhamTableAdapter.Fill(this.DOANCHUYENMON1DataSet.SanPham);
             // TODO: This line of code loads data into the 'DOANCHUYENMON7DataSet.HDBH_SP' table. You can move, or remove it, as needed.
-            this.HDBH_SPTableAdapter.Fill(this.DOANCHUYENMON7DataSet.HDBH_SP);
+        //    this.HDBH_SPTableAdapter.Fill(this.DOANCHUYENMON7DataSet.HDBH_SP);
             
 
 

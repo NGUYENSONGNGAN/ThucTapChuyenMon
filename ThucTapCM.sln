@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThucTapCM", "ThucTapCM\ThucTapCM.csproj", "{13C34791-60DF-4960-A398-7CE4A427ACB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatKhachHang", "ChatKhachHang\ChatKhachHang.csproj", "{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{438FBE4B-6D8B-4908-A6B5-E94B1B41AF93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13C34791-60DF-4960-A398-7CE4A427ACB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13C34791-60DF-4960-A398-7CE4A427ACB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13C34791-60DF-4960-A398-7CE4A427ACB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13C34791-60DF-4960-A398-7CE4A427ACB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53C75269-E712-410F-8870-1AD6FA195286}
+	EndGlobalSection
+EndGlobal

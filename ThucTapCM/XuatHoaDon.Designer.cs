@@ -32,36 +32,36 @@ namespace ThucTapCM
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.SanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DOANCHUYENMON1DataSet = new ThucTapCM.DOANCHUYENMON1DataSet();
+        //    this.DOANCHUYENMON1DataSet = new ThucTapCM.DOANCHUYENMON1DataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DOANCHUYENMON7DataSet = new ThucTapCM.DOANCHUYENMON7DataSet();
+        //    this.DOANCHUYENMON7DataSet = new ThucTapCM.DOANCHUYENMON7DataSet();
             this.HDBH_SPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.HDBH_SPTableAdapter = new ThucTapCM.DOANCHUYENMON7DataSetTableAdapters.HDBH_SPTableAdapter();
-            this.SanPhamTableAdapter = new ThucTapCM.DOANCHUYENMON1DataSetTableAdapters.SanPhamTableAdapter();
-            this.DOANCHUYENMON7DataSet3 = new ThucTapCM.DOANCHUYENMON7DataSet3();
+        //    this.HDBH_SPTableAdapter = new ThucTapCM.DOANCHUYENMON7DataSetTableAdapters.HDBH_SPTableAdapter();
+         //   this.SanPhamTableAdapter = new ThucTapCM.DOANCHUYENMON1DataSetTableAdapters.SanPhamTableAdapter();
+         //   this.DOANCHUYENMON7DataSet3 = new ThucTapCM.DOANCHUYENMON7DataSet3();
             this.areporthdxBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.areporthdxTableAdapter = new ThucTapCM.DOANCHUYENMON7DataSet3TableAdapters.areporthdxTableAdapter();
+         //   this.areporthdxTableAdapter = new ThucTapCM.DOANCHUYENMON7DataSet3TableAdapters.areporthdxTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.SanPhamBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON1DataSet)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HDBH_SPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet3)).BeginInit();
+         //   ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.areporthdxBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SanPhamBindingSource
             // 
             this.SanPhamBindingSource.DataMember = "SanPham";
-            this.SanPhamBindingSource.DataSource = this.DOANCHUYENMON1DataSet;
+        //    this.SanPhamBindingSource.DataSource = this.DOANCHUYENMON1DataSet;
             // 
             // DOANCHUYENMON1DataSet
             // 
-            this.DOANCHUYENMON1DataSet.DataSetName = "DOANCHUYENMON1DataSet";
-            this.DOANCHUYENMON1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+         //   this.DOANCHUYENMON1DataSet.DataSetName = "DOANCHUYENMON1DataSet";
+        //    this.DOANCHUYENMON1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -102,35 +102,35 @@ namespace ThucTapCM
             // 
             // DOANCHUYENMON7DataSet
             // 
-            this.DOANCHUYENMON7DataSet.DataSetName = "DOANCHUYENMON7DataSet";
-            this.DOANCHUYENMON7DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+      //      this.DOANCHUYENMON7DataSet.DataSetName = "DOANCHUYENMON7DataSet";
+       //     this.DOANCHUYENMON7DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // HDBH_SPBindingSource
             // 
             this.HDBH_SPBindingSource.DataMember = "HDBH_SP";
-            this.HDBH_SPBindingSource.DataSource = this.DOANCHUYENMON7DataSet;
+      //      this.HDBH_SPBindingSource.DataSource = this.DOANCHUYENMON7DataSet;
             // 
             // HDBH_SPTableAdapter
             // 
-            this.HDBH_SPTableAdapter.ClearBeforeFill = true;
+       //     this.HDBH_SPTableAdapter.ClearBeforeFill = true;
             // 
             // SanPhamTableAdapter
             // 
-            this.SanPhamTableAdapter.ClearBeforeFill = true;
+       //     this.SanPhamTableAdapter.ClearBeforeFill = true;
             // 
             // DOANCHUYENMON7DataSet3
             // 
-            this.DOANCHUYENMON7DataSet3.DataSetName = "DOANCHUYENMON7DataSet3";
-            this.DOANCHUYENMON7DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+        //    this.DOANCHUYENMON7DataSet3.DataSetName = "DOANCHUYENMON7DataSet3";
+        //    this.DOANCHUYENMON7DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // areporthdxBindingSource
             // 
             this.areporthdxBindingSource.DataMember = "areporthdx";
-            this.areporthdxBindingSource.DataSource = this.DOANCHUYENMON7DataSet3;
+       //     this.areporthdxBindingSource.DataSource = this.DOANCHUYENMON7DataSet3;
             // 
             // areporthdxTableAdapter
             // 
-            this.areporthdxTableAdapter.ClearBeforeFill = true;
+        //    this.areporthdxTableAdapter.ClearBeforeFill = true;
             // 
             // XuatHoaDon
             // 
@@ -143,11 +143,10 @@ namespace ThucTapCM
             this.Text = "XuatHoaDon";
             this.Load += new System.EventHandler(this.XuatHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SanPhamBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON1DataSet)).EndInit();
+        //    ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HDBH_SPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet3)).EndInit();
+        //  ((System.ComponentModel.ISupportInitialize)(this.HDBH_SPBindingSource)).EndInit();
+        //    ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.areporthdxBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -160,13 +159,10 @@ namespace ThucTapCM
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
         private System.Windows.Forms.BindingSource HDBH_SPBindingSource;
-        private DOANCHUYENMON7DataSet DOANCHUYENMON7DataSet;
-        private DOANCHUYENMON7DataSetTableAdapters.HDBH_SPTableAdapter HDBH_SPTableAdapter;
+
         private System.Windows.Forms.BindingSource SanPhamBindingSource;
-        private DOANCHUYENMON1DataSet DOANCHUYENMON1DataSet;
-        private DOANCHUYENMON1DataSetTableAdapters.SanPhamTableAdapter SanPhamTableAdapter;
+   
         private System.Windows.Forms.BindingSource areporthdxBindingSource;
-        private DOANCHUYENMON7DataSet3 DOANCHUYENMON7DataSet3;
-        private DOANCHUYENMON7DataSet3TableAdapters.areporthdxTableAdapter areporthdxTableAdapter;
+  
     }
 }
