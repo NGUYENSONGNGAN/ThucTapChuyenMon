@@ -31,13 +31,28 @@ namespace ThucTapCM
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.gvgiohang5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DOANCHUYENMON7DataSet1 = new ThucTapCM.DOANCHUYENMON7DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.gvgiohang1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.HDBHtheoma = new ThucTapCM.HDBHtheoma();
-            this.gvgiohang1TableAdapter = new ThucTapCM.HDBHtheomaTableAdapters.gvgiohang1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.gvgiohang1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HDBHtheoma)).BeginInit();
+            this.gvgiohang6BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gvgiohang6TableAdapter = new ThucTapCM.datasetXHDTableAdapters.gvgiohang6TableAdapter();
+            this.datasetXHD = new ThucTapCM.datasetXHD();
+            this.gvgiohang5TableAdapter = new ThucTapCM.DOANCHUYENMON7DataSet1TableAdapters.gvgiohang5TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.gvgiohang5BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvgiohang6BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetXHD)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gvgiohang5BindingSource
+            // 
+            this.gvgiohang5BindingSource.DataMember = "gvgiohang5";
+            this.gvgiohang5BindingSource.DataSource = this.DOANCHUYENMON7DataSet1;
+            // 
+            // DOANCHUYENMON7DataSet1
+            // 
+            this.DOANCHUYENMON7DataSet1.DataSetName = "DOANCHUYENMON7DataSet1";
+            this.DOANCHUYENMON7DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -45,28 +60,27 @@ namespace ThucTapCM
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.gvgiohang1BindingSource;
+            reportDataSource1.Value = this.gvgiohang6BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ThucTapCM.AreportHD.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ThucTapCM.NhoChayDuocNha.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(1, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 444);
             this.reportViewer1.TabIndex = 0;
             // 
-            // gvgiohang1BindingSource
+            // gvgiohang6TableAdapter
             // 
-            this.gvgiohang1BindingSource.DataMember = "gvgiohang1";
-            this.gvgiohang1BindingSource.DataSource = this.HDBHtheoma;
+            this.gvgiohang6TableAdapter.ClearBeforeFill = true;
             // 
-            // HDBHtheoma
+            // datasetXHD
             // 
-            this.HDBHtheoma.DataSetName = "HDBHtheoma";
-            this.HDBHtheoma.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.datasetXHD.DataSetName = "datasetXHD";
+            this.datasetXHD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gvgiohang1TableAdapter
+            // gvgiohang5TableAdapter
             // 
-            this.gvgiohang1TableAdapter.ClearBeforeFill = true;
+            this.gvgiohang5TableAdapter.ClearBeforeFill = true;
             // 
             // AHDXform
             // 
@@ -77,8 +91,10 @@ namespace ThucTapCM
             this.Name = "AHDXform";
             this.Text = "AHDXform";
             this.Load += new System.EventHandler(this.AHDXform_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvgiohang1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HDBHtheoma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvgiohang5BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DOANCHUYENMON7DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvgiohang6BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datasetXHD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,8 +102,11 @@ namespace ThucTapCM
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource gvgiohang1BindingSource;
-        private HDBHtheoma HDBHtheoma;
-        private HDBHtheomaTableAdapters.gvgiohang1TableAdapter gvgiohang1TableAdapter;
+        private System.Windows.Forms.BindingSource gvgiohang6BindingSource;
+        private datasetXHDTableAdapters.gvgiohang6TableAdapter gvgiohang6TableAdapter;
+        private datasetXHD datasetXHD;
+        private System.Windows.Forms.BindingSource gvgiohang5BindingSource;
+        private DOANCHUYENMON7DataSet1 DOANCHUYENMON7DataSet1;
+        private DOANCHUYENMON7DataSet1TableAdapters.gvgiohang5TableAdapter gvgiohang5TableAdapter;
     }
 }

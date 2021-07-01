@@ -39,8 +39,8 @@ namespace ThucTapCM
             this.label1 = new System.Windows.Forms.Label();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.btnghichu = new FontAwesome.Sharp.IconButton();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtghichu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvgiohang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictQR)).BeginInit();
             this.SuspendLayout();
@@ -159,35 +159,33 @@ namespace ThucTapCM
             this.btnghichu.UseVisualStyleBackColor = false;
             this.btnghichu.Click += new System.EventHandler(this.btnghichu_Click);
             // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Info;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(960, 145);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(539, 128);
-            this.listView1.TabIndex = 136;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(800, 187);
+            this.label2.Location = new System.Drawing.Point(800, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 32);
             this.label2.TabIndex = 137;
             this.label2.Text = "Ghi Chú :";
+            // 
+            // txtghichu
+            // 
+            this.txtghichu.BackColor = System.Drawing.Color.White;
+            this.txtghichu.Location = new System.Drawing.Point(949, 187);
+            this.txtghichu.Multiline = true;
+            this.txtghichu.Name = "txtghichu";
+            this.txtghichu.Size = new System.Drawing.Size(534, 99);
+            this.txtghichu.TabIndex = 138;
             // 
             // FromThanhToanHDX
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1559, 831);
+            this.Controls.Add(this.txtghichu);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnghichu);
             this.Controls.Add(this.lbTongTien);
             this.Controls.Add(this.label1);
@@ -214,7 +212,7 @@ namespace ThucTapCM
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbTongTien;
         private FontAwesome.Sharp.IconButton btnghichu;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtghichu;
     }
 }

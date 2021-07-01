@@ -445,15 +445,16 @@ namespace ThucTapCM
             DialogResult a = MessageBox.Show("Bạn có chắc chắn muốn xóa ?", "Delete", MessageBoxButtons.YesNo);
             if (a == DialogResult.Yes)
             {
-                string masp = "select MaSP from SanPham where TenSp ='" + Convert.ToString(sanpham) + "'";
+                string masp = "select MaSP from SanPham  where TenSp =N'" + Convert.ToString(sanpham.Trim()) + "'";
                 DataTable xmasp = DataProvider.Instance.ExecuteQuery(masp);
+                Console.WriteLine(xmasp.Rows.Count);
                 int ma = Convert.ToInt32(xmasp.Rows[0]["MaSP"].ToString());
 
-                string mach = "select MaCauHinh from SP_CauHinh where TenCauHinh ='" + Convert.ToString(cauhinh) + "'";
+                string mach = "select MaCauHinh from SP_CauHinh where TenCauHinh =N'" + Convert.ToString(cauhinh.Trim()) + "'";
                 DataTable xmach = DataProvider.Instance.ExecuteQuery(mach);
                 int maCH = Convert.ToInt32(xmach.Rows[0]["MaCauHinh"].ToString());
 
-                string mamau = "select MaMau from SP_Mau where TenMau ='" + Convert.ToString(mausac) + "'";
+                string mamau = "select MaMau from SP_Mau where TenMau =N'" + Convert.ToString(mausac.Trim()) + "'";
                 DataTable xmamau = DataProvider.Instance.ExecuteQuery(mamau);
                 int maMau = Convert.ToInt32(xmamau.Rows[0]["MaMau"].ToString());
 
@@ -507,6 +508,22 @@ namespace ThucTapCM
 
             }
 
+        }
+
+        private void lbsoluong_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lbdongia_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

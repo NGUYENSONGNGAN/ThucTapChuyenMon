@@ -67,7 +67,6 @@ namespace ThucTapCM
             this.lbsoluong = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lbdongia = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.gvSeachHD = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-           
             this.btnsphet = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCancel = new System.Windows.Forms.PictureBox();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
@@ -189,7 +188,7 @@ namespace ThucTapCM
             this.pnsphet.Controls.Add(this.lbDTL);
             this.pnsphet.Location = new System.Drawing.Point(18, 223);
             this.pnsphet.Name = "pnsphet";
-            this.pnsphet.Size = new System.Drawing.Size(1424, 450);
+            this.pnsphet.Size = new System.Drawing.Size(1420, 450);
             this.pnsphet.TabIndex = 151;
             // 
             // lbDTL
@@ -343,9 +342,9 @@ namespace ThucTapCM
             this.gvHDNH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gvHDNH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Fuchsia;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -451,6 +450,7 @@ namespace ThucTapCM
             this.lbsoluong.TabIndex = 146;
             this.lbsoluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.lbsoluong.OnValueChanged += new System.EventHandler(this.lbsoluong_OnValueChanged);
+            this.lbsoluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lbsoluong_KeyPress_1);
             // 
             // lbdongia
             // 
@@ -470,6 +470,7 @@ namespace ThucTapCM
             this.lbdongia.TabIndex = 147;
             this.lbdongia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.lbdongia.OnValueChanged += new System.EventHandler(this.lbdongia_OnValueChanged);
+            this.lbdongia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lbdongia_KeyPress_1);
             // 
             // gvSeachHD
             // 
@@ -486,7 +487,7 @@ namespace ThucTapCM
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Fuchsia;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -519,13 +520,9 @@ namespace ThucTapCM
             this.gvSeachHD.RowHeadersVisible = false;
             this.gvSeachHD.RowHeadersWidth = 51;
             this.gvSeachHD.RowTemplate.Height = 24;
-            this.gvSeachHD.Size = new System.Drawing.Size(495, 344);
+            this.gvSeachHD.Size = new System.Drawing.Size(495, 423);
             this.gvSeachHD.TabIndex = 149;
             this.gvSeachHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSeachHD_CellClick_1);
-            // 
-            // tableAdapterManager1
-            // 
-         
             // 
             // btnsphet
             // 

@@ -593,8 +593,9 @@ namespace ThucTapCM
             cbxLSP.Text = gvTTSP.Rows[r].Cells[5].Value.ToString();
             String query = "execute IMG3  @ma";
             DataTable HA = DataProvider.Instance.ExecuteQuery(query, new object[] { lbMSP.Text });
+            
             //Byte hinhanh = HA.Rows[0]["HinhAnh"].ToString();
-            if (HA.ToString() == null)
+            if (HA.Rows.Count<=0)
             {
                 picImg.Image = null;
             }
@@ -604,7 +605,7 @@ namespace ThucTapCM
                 // Image img = Image.FromStream(ms);
                 // pictQR.Image = img;
 
-              /*  MemoryStream img = new MemoryStream((byte[])HA.Rows[0]["HinhAnh"]);
+                MemoryStream img = new MemoryStream((byte[])HA.Rows[0]["HinhAnh"]);
                 Image i = Image.FromStream(img);
                 if (i == null)
                 {
@@ -612,8 +613,10 @@ namespace ThucTapCM
                 }
                 else
                 {
+                    
                     picImg.Image = i;
-                }*/
+
+                }
             }
 
             cbxLSP.Enabled = true;

@@ -59,14 +59,31 @@ namespace ThucTapCM
             Image img = Image.FromStream(ms);
             pictQR.Image = img;
             //pictQR.Image = new Bitmap(ms);
-
+          
         }
 
         private void btnghichu_Click(object sender, EventArgs e)
         {
-            AHDXform aHDXform = new AHDXform();
-            this.Hide();
-            aHDXform.Show();
+
+            if (txtghichu.Text.Trim() == "" || txtghichu.Text.Trim() == null)
+            {
+                DialogResult a = MessageBox.Show("Chưa có ghi chú \n Bạn có muốn tiếp tục xuất hóa đơn?", "Hủy", MessageBoxButtons.YesNo);
+                if (a == DialogResult.Yes)
+                {
+                    FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
+                    this.Hide();
+                    xuatHoaDonReport.Show();
+                }
+            }else
+            {
+                string udateHDB = "update HoaDonBanHang set TrangThai = 1 , GhiChu =  '" +Convert.ToString( txtghichu.Text) + "'where MaHD ='" + Convert.ToInt32(MHDBH) + "'";
+                DataProvider.Instance.ExecuteNonQuery(udateHDB);
+                FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
+                this.Hide();
+                xuatHoaDonReport.Show();
+            }
+
         }
+            
     }
 }

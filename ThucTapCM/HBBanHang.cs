@@ -337,8 +337,8 @@ namespace ThucTapCM
             }
             else if (Convert.ToInt32(txtSoLuong.Text) > Convert.ToInt32(lbHangton.Text))
             {
-                MessageBox.Show("Số lượng bạn cần không đủ !");
-                txtSoLuong.Focus();
+                MessageBox.Show("Số lượng bạn cần không đủ vui lòng nhập lại!");
+                txtSoLuong.ResetText();
             }
 
         }
@@ -384,6 +384,9 @@ namespace ThucTapCM
                     DataProvider.Instance.ExecuteNonQuery(queryUDSLT, new object[] {Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbHangton.Text) - Convert.ToInt32(txtSoLuong.Text)});
 
+                    String UDTGBH = "execute TGBHConLai1 @mahd , @masp , @mach , @mamau ";
+                    DataProvider.Instance.ExecuteNonQuery(UDTGBH,new object[] {Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue),Convert.ToInt32(cbxCauHinh.SelectedValue), Convert.ToInt32(cbxMauSac.SelectedValue) });
+
                     MessageBox.Show("Add Success !");
 
                     string querygvm = "execute gvgiohang1 @ma ";
@@ -417,6 +420,10 @@ namespace ThucTapCM
                         DataProvider.Instance.ExecuteNonQuery(queryUDSLT, new object[] {Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbHangton.Text) - Convert.ToInt32(txtSoLuong.Text)});
 
+                        String UDTGBH = "execute TGBHConLai1 @mahd , @masp , @mach , @mamau ";
+                        DataProvider.Instance.ExecuteNonQuery(UDTGBH, new object[] { Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue), Convert.ToInt32(cbxMauSac.SelectedValue) });
+
+
                         string querygvm = "execute gvgiohang1 @ma ";    
                         DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
                         gvHDBH.DataSource = gvgiohang;
@@ -442,6 +449,8 @@ namespace ThucTapCM
                         string queryUDSLT = "execute UpdateSLTCTSP1 @masp , @macauhinh , @mamau  , @soluong ";
                         DataProvider.Instance.ExecuteNonQuery(queryUDSLT, new object[] {Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbHangton.Text) - Convert.ToInt32(txtSoLuong.Text)});
+                        String UDTGBH = "execute TGBHConLai1 @mahd , @masp , @mach , @mamau ";
+                        DataProvider.Instance.ExecuteNonQuery(UDTGBH, new object[] { Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue), Convert.ToInt32(cbxMauSac.SelectedValue) });
 
                         string querygvm = "execute gvgiohang1 @ma ";
                         DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
@@ -476,25 +485,14 @@ namespace ThucTapCM
             DialogResult xoaCTHDX = MessageBox.Show("Bạn có muốn xóa không ???", "Xóa", MessageBoxButtons.YesNo);
             if (xoaCTHDX == DialogResult.Yes)
             {
-                //câu lệnh delete
-                string timma = "execute timma1 @tensanpham , @cauhinh , @mausac ";
-                DataTable tbtimma = DataProvider.Instance.ExecuteQuery(timma, new object[] {ten , cauhinh , mausac });
-                string deletegiohang = "execute deletegiohang @mahd , @masp , @macauhinh , @mamau ";
-                DataProvider.Instance.ExecuteNonQuery(deletegiohang, new object[] { Convert.ToInt32(label13.Text), int.Parse(tbtimma.Rows[0]["MaSP"].ToString()), int.Parse(tbtimma.Rows[1]["MaCauHinh"].ToString()), int.Parse(tbtimma.Rows[2]["MaMau"].ToString()) });
-
-               //UD tiền hóa đơn bán hàng
-
-
-                //UD số lượng tồn 
                 
-                
+
             }
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            MKHC = 0;
-            MKHM = 0;
+           
             String query = "execute selectHDBH_SP @ma";
             DataTable HDBH_SP = DataProvider.Instance.ExecuteQuery(query ,new object[] {Convert.ToInt32( lbMHD.Text)});
             if (HDBH_SP.Rows.Count ==0)
@@ -521,39 +519,25 @@ namespace ThucTapCM
                 if (Convert.ToDouble( tongtien.ToString()) >= 2000000)
                 {
                     string updateDTL = "Update KhachHang set DiemTichLuy = '" +Convert.ToInt32(Convert.ToInt32(diemtichluy)+ 10 )+ "' Where MaKH = '" + Convert.ToInt32(MKH) + "' ";
-                    if (Convert.ToInt32(diemtichluy) >= 150 && Convert.ToInt32(diemtichluy) < 350)
+                    DataProvider.Instance.ExecuteNonQuery(updateDTL);
+                    if (Convert.ToInt32(Convert.ToInt32(diemtichluy) + 10) >= 150 && Convert.ToInt32(Convert.ToInt32(diemtichluy) + 10) < 350)
                     {
                         string UDLKH = "Update KhachHang set MaLKH= 2 where MaKH ='" + Convert.ToInt32(MKH) + "' ";
+                        DataProvider.Instance.ExecuteNonQuery(UDLKH);
                     }
-                    else if (Convert.ToInt32(diemtichluy) >= 350 && Convert.ToInt32(diemtichluy) < 550)
+                    else if (Convert.ToInt32(Convert.ToInt32(diemtichluy) + 10) >= 350 && Convert.ToInt32(Convert.ToInt32(diemtichluy) + 10) < 550)
                     {
                         string UDLKH = "Update KhachHang set MaLKH= 3 where MaKH ='" + Convert.ToInt32(MKH) + "' ";
+                        DataProvider.Instance.ExecuteNonQuery(UDLKH);
                     }
-                    else if (Convert.ToInt32(diemtichluy) >= 550)
+                    else if (Convert.ToInt32(Convert.ToInt32(diemtichluy) + 10) >= 550)
                     {
                         string UDLKH = "Update KhachHang set MaLKH= 4 where MaKH ='" + Convert.ToInt32(MKH) + "' ";
+                        DataProvider.Instance.ExecuteNonQuery(UDLKH);
                     }
                 }
 
-                    /*  if (float.Parse(HoaDon.Rows[2]["TongTien"].ToString()) >= 200000)
-                      {
-                          string updateDTL = "Update KhachHang set DiemTichLuy = '" + int.Parse(khachhang.Rows[2]["DiemTichLuy"].ToString()) + "' Where MaKH = '" + int.Parse(khachhang.Rows[0]["MaKH"].ToString()) + "' ";
-
-                          string selectKH1 = "select * from KhachHang where MaKH = '" + MKH + "'";
-                          DataTable khachhang1 = DataProvider.Instance.ExecuteQuery(selectKH1);
-                          if (int.Parse(khachhang1.Rows[2]["DiemTichLuy"].ToString()) >= 150 && int.Parse(khachhang1.Rows[2]["DiemTichLuy"].ToString()) < 350)
-                          {
-                              string UDLKH = "Update KhachHang set MaLKH= 2 where MaKH ='"+Convert.ToInt32(int.Parse(khachhang1.Rows[0]["MaKH"].ToString())) +"' ";
-                          }
-                          else if (int.Parse(khachhang1.Rows[2]["DiemTichLuy"].ToString()) >= 350 && int.Parse(khachhang1.Rows[2]["DiemTichLuy"].ToString()) <550)
-                          {
-                              string UDLKH = "Update KhachHang set MaLKH= 3 where MaKH ='" + Convert.ToInt32(int.Parse(khachhang1.Rows[0]["MaKH"].ToString())) + "' ";
-                          }
-                          else if(int.Parse(khachhang1.Rows[2]["DiemTichLuy"].ToString()) >= 550)
-                          {
-                              string UDLKH = "Update KhachHang set MaLKH= 4 where MaKH ='" + Convert.ToInt32(int.Parse(khachhang1.Rows[0]["MaKH"].ToString())) + "' ";
-                          }    
-                      }*/
+                   
                     FromThanhToanHDX fromThanh = new FromThanhToanHDX();
                 this.Hide();
                 fromThanh.Show();
@@ -575,14 +559,21 @@ namespace ThucTapCM
                 DialogResult a = MessageBox.Show("Bạn có muốn hủy hóa đơn này không ?", "Hủy", MessageBoxButtons.YesNo);
                 if (a == DialogResult.Yes)
                 {
-                    //TTMHDX.MoFormGhiChuHuyHDX = 1;
                     GhichuHoaDonBanHang ghichu = new GhichuHoaDonBanHang();
-                    ghichu.ShowDialog();
-                        
-                    
+                    if(ghichu.ShowDialog() == DialogResult.Yes)
+                    {
+                        this.Hide();
+                    }
                 }
             }   
-            
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

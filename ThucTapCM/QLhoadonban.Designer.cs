@@ -40,14 +40,14 @@ namespace ThucTapCM
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gvHDBH = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnXCT = new Bunifu.Framework.UI.BunifuThinButton2();
             this.picvoice = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvHDBH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picvoice)).BeginInit();
             this.SuspendLayout();
             // 
             // lbMahd
@@ -76,6 +76,7 @@ namespace ThucTapCM
             this.txtseach.Size = new System.Drawing.Size(507, 52);
             this.txtseach.TabIndex = 108;
             this.txtseach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtseach.OnValueChanged += new System.EventHandler(this.txtseach_OnValueChanged);
             // 
             // groupBox1
             // 
@@ -140,6 +141,7 @@ namespace ThucTapCM
             this.gvHDBH.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.gvHDBH.Size = new System.Drawing.Size(1426, 516);
             this.gvHDBH.TabIndex = 135;
+            this.gvHDBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvHDBH_CellClick);
             // 
             // label1
             // 
@@ -151,6 +153,17 @@ namespace ThucTapCM
             this.label1.Size = new System.Drawing.Size(532, 55);
             this.label1.TabIndex = 105;
             this.label1.Text = "HÓA ĐƠN BÁN HÀNG ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1389, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 139;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -186,6 +199,7 @@ namespace ThucTapCM
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // btnXCT
             // 
@@ -222,16 +236,7 @@ namespace ThucTapCM
             this.picvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picvoice.TabIndex = 107;
             this.picvoice.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1389, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 139;
-            this.pictureBox1.TabStop = false;
+            this.picvoice.Click += new System.EventHandler(this.picvoice_Click);
             // 
             // QLhoadonban
             // 
@@ -250,10 +255,12 @@ namespace ThucTapCM
             this.Name = "QLhoadonban";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLhoadonban";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLhoadonban_FormClosing);
+            this.Load += new System.EventHandler(this.QLhoadonban_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvHDBH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picvoice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

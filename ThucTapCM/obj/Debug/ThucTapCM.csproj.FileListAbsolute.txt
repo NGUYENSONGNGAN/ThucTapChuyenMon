@@ -117,9 +117,7 @@ D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\bin\Debug\DevExpress.
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\bin\Debug\zxing.xml
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\bin\Debug\zxing.presentation.xml
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\bin\Debug\de\DevExpress.Data.v21.1.resources.dll
-D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.Form2.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.AHDXform.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.AHDXuat.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormTTKH.resources
-D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormTTNV.resources
-D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.HoaDonBanHang.resources
+D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormXuatHoaDonReport.resources

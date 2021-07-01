@@ -153,6 +153,11 @@
     <Compile Include="AHDXuat.Designer.cs">
       <DependentUpon>AHDXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="ARPHDXData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ARPHDXData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BackUpData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +195,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="datasetXHD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetXHD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DOANCHUYENMON7DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOANCHUYENMON7DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DOANCHUYENMON7DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DOANCHUYENMON7DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSchayhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,18 +227,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormaddNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormaddNhanVien.Designer.cs">
-      <DependentUpon>FormaddNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChat.cs">
       <SubType>Form</SubType>
@@ -250,17 +258,17 @@
     <Compile Include="FormTTNhanVien.Designer.cs">
       <DependentUpon>FormTTNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTTNV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTTNV.Designer.cs">
-      <DependentUpon>FormTTNV.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTTSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTTSanPham.Designer.cs">
       <DependentUpon>FormTTSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXuatHoaDonReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXuatHoaDonReport.Designer.cs">
+      <DependentUpon>FormXuatHoaDonReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FromThanhToanHDX.cs">
       <SubType>Form</SubType>
@@ -297,12 +305,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HoaDon.xsd</DependentUpon>
     </Compile>
-    <Compile Include="HoaDonBanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HoaDonBanHang.Designer.cs">
-      <DependentUpon>HoaDonBanHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="HoaDonNhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,7 +317,6 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paramater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLhoadonban.cs">
@@ -350,7 +351,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TenNhanVien.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Test.cs" />
     <Compile Include="ThongKeHangTon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,15 +418,25 @@
     <EmbeddedResource Include="FormTTKH.resx">
       <DependentUpon>FormTTKH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTTNV.resx">
-      <DependentUpon>FormTTNV.cs</DependentUpon>
+    <EmbeddedResource Include="FormXuatHoaDonReport.resx">
+      <DependentUpon>FormXuatHoaDonReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HoaDonBanHang.resx">
-      <DependentUpon>HoaDonBanHang.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="NhoChayDuocNha.rdlc" />
+    <EmbeddedResource Include="ReportXuatHoaDon.rdlc" />
     <EmbeddedResource Include="XuatHoaDon.resx">
       <DependentUpon>XuatHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ARPHDXData.xsc">
+      <DependentUpon>ARPHDXData.xsd</DependentUpon>
+    </None>
+    <None Include="ARPHDXData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ARPHDXData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ARPHDXData.xss">
+      <DependentUpon>ARPHDXData.xsd</DependentUpon>
+    </None>
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
@@ -438,9 +448,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChat.resx">
       <DependentUpon>FormChat.cs</DependentUpon>
@@ -494,9 +501,6 @@
     <EmbeddedResource Include="QuetmaQR.resx">
       <DependentUpon>QuetmaQR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
-    <EmbeddedResource Include="ReportHoaDon.rdlc" />
     <EmbeddedResource Include="test.rdlc" />
     <EmbeddedResource Include="ThongKeHangTon.resx">
       <DependentUpon>ThongKeHangTon.cs</DependentUpon>
@@ -541,6 +545,39 @@
     </None>
     <None Include="DataSet5.xss">
       <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="datasetXHD.xsc">
+      <DependentUpon>datasetXHD.xsd</DependentUpon>
+    </None>
+    <None Include="datasetXHD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetXHD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datasetXHD.xss">
+      <DependentUpon>datasetXHD.xsd</DependentUpon>
+    </None>
+    <None Include="DOANCHUYENMON7DataSet.xsc">
+      <DependentUpon>DOANCHUYENMON7DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DOANCHUYENMON7DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DOANCHUYENMON7DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DOANCHUYENMON7DataSet.xss">
+      <DependentUpon>DOANCHUYENMON7DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DOANCHUYENMON7DataSet1.xsc">
+      <DependentUpon>DOANCHUYENMON7DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DOANCHUYENMON7DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DOANCHUYENMON7DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DOANCHUYENMON7DataSet1.xss">
+      <DependentUpon>DOANCHUYENMON7DataSet1.xsd</DependentUpon>
     </None>
     <None Include="HDBHtheoma.xsc">
       <DependentUpon>HDBHtheoma.xsd</DependentUpon>

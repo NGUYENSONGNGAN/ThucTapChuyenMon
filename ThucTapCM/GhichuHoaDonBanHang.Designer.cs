@@ -56,6 +56,7 @@ namespace ThucTapCM
             // btnghichu
             // 
             this.btnghichu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(226)))), ((int)(((byte)(240)))));
+            this.btnghichu.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.btnghichu.FlatAppearance.BorderSize = 0;
             this.btnghichu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Fuchsia;
             this.btnghichu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));

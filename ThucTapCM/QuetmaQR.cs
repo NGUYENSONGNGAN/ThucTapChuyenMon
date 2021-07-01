@@ -67,14 +67,14 @@ namespace ThucTapCM
                     timer1.Enabled = true;
                     timer1.Start();
                     btnketnoi.Text = "Ngắt ứng dụng";
-                    btnketnoi.Image = Image.FromFile("..//..//..//..//image//icondis.png");
+                //  btnketnoi.Image = Image.FromFile("..//..//..//..//image//icondis.png");
                 }
             }
             else
             {
                 pictcamera.Visible = false;
                 btnketnoi.Text = "Kết nối ứng dụng";
-                btnketnoi.Image = Image.FromFile("..//..//..//..//image//iconconnect.png");
+             //   btnketnoi.Image = Image.FromFile("..//..//..//..//image//iconconnect.png");
                 timer1.Stop();
                 Stream.Stop();
                 timer1.Enabled = false;
@@ -100,7 +100,7 @@ namespace ThucTapCM
                         {
                             MessageBox.Show("Không có hóa đơn này\nXin mời kiểm tra lại", "Lỗi");
                         }
-                        else if (HDX != null)
+                        else if (MaHD.Rows.Count >= 1)
                         {
                             TTTK.MaHDX = Convert.ToInt32(MaHDX);
                             TTTK.MoFormRP = 1;
@@ -108,9 +108,9 @@ namespace ThucTapCM
                             {
                                 TTTK.Load++;
                                 btnketnoi_Click(sender, e);
-                                FromThanhToanHDX fromThanhToanHDX = new FromThanhToanHDX();
+                                FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
                                 this.Hide();
-                                fromThanhToanHDX.Show();
+                                xuatHoaDonReport.Show();
                             }
                         }
                     }

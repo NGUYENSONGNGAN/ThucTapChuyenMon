@@ -92,6 +92,7 @@ namespace ThucTapCM.DAO
                         if (item.Contains('@'))
                         {
                             sqlCommand.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
                         }
                     }
                 }
