@@ -76,6 +76,8 @@ namespace ThucTapCM
             string querygvm = "execute gvgiohang1 @ma ";
             DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
             gvHDBH.DataSource = gvgiohang;
+
+            lbTongtien.Text = "0";
         }
 
         private void HBBanHang_Load(object sender, EventArgs e)
@@ -133,10 +135,23 @@ namespace ThucTapCM
             cbxMauSac.ValueMember = "MaMau";
             cbxMauSac.DataSource = mau;
 
+        }
+        void hienthitongtien()
+        {
+            string lbtongtien = "select * from HoaDonBanHang where MaHD = '" + Convert.ToInt32(lbMHD.Text) + "'";
+            DataTable tongtienlb = DataProvider.Instance.ExecuteQuery(lbtongtien);
 
+            if (tongtienlb.Rows.Count <= 0)
+            {
+                lbTongtien.Text = "0";
+            }
+            else if (tongtienlb.Rows.Count >= 1)
+            {
+                double tienhienthi = Convert.ToDouble(tongtienlb.Rows[0]["TongTien"].ToString());
+                lbTongtien.Text = tienhienthi.ToString("N0", culture);
+            }
 
         }
-
         private void cbxSanPham_SelectedValueChanged(object sender, EventArgs e)
         {
             try
@@ -376,16 +391,21 @@ namespace ThucTapCM
                     DataProvider.Instance.ExecuteNonQuery(queryHDBT_SP, new object[] {Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue),Convert.ToInt32(cbxCauHinh.SelectedValue),
 
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(txtSoLuong.Text), dongia * Convert.ToInt32(txtSoLuong.Text)});
-
+                    //udtien
                     String queryUDTT = "execute UpdateHDBHTT @ma , @tongtien ";
                     DataProvider.Instance.ExecuteNonQuery(queryUDTT, new object[] { Convert.ToInt32(lbMHD.Text), dongia * Convert.ToInt32(txtSoLuong.Text) });
 
+
+                    //udslton
                     string queryUDSLT = "execute UpdateSLTCTSP1 @masp , @macauhinh , @mamau  , @soluong ";
                     DataProvider.Instance.ExecuteNonQuery(queryUDSLT, new object[] {Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbHangton.Text) - Convert.ToInt32(txtSoLuong.Text)});
-
+                    //udbaohanh
                     String UDTGBH = "execute TGBHConLai1 @mahd , @masp , @mach , @mamau ";
                     DataProvider.Instance.ExecuteNonQuery(UDTGBH,new object[] {Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue),Convert.ToInt32(cbxCauHinh.SelectedValue), Convert.ToInt32(cbxMauSac.SelectedValue) });
+                    baohanh();
+
+
 
                     MessageBox.Show("Add Success !");
 
@@ -393,6 +413,8 @@ namespace ThucTapCM
                     DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
                     gvHDBH.DataSource = gvgiohang;
                     loadcombocox();
+                    hienthitongtien();
+                    
                     txtSoLuong.ResetText();
                     btnThanhToan.Enabled = true;
                     gvSeachHD.Visible = false;
@@ -419,15 +441,16 @@ namespace ThucTapCM
                         string queryUDSLT = "execute UpdateSLTCTSP1 @masp , @macauhinh , @mamau  , @soluong ";
                         DataProvider.Instance.ExecuteNonQuery(queryUDSLT, new object[] {Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbHangton.Text) - Convert.ToInt32(txtSoLuong.Text)});
-
+                        //tgbh
                         String UDTGBH = "execute TGBHConLai1 @mahd , @masp , @mach , @mamau ";
                         DataProvider.Instance.ExecuteNonQuery(UDTGBH, new object[] { Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue), Convert.ToInt32(cbxMauSac.SelectedValue) });
-
+                        baohanh();
 
                         string querygvm = "execute gvgiohang1 @ma ";    
                         DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
                         gvHDBH.DataSource = gvgiohang;
                         loadcombocox();
+                        hienthitongtien();
                         txtSoLuong.ResetText();
                         btnThanhToan.Enabled = true;
                         gvSeachHD.Visible = false;
@@ -449,13 +472,12 @@ namespace ThucTapCM
                         string queryUDSLT = "execute UpdateSLTCTSP1 @masp , @macauhinh , @mamau  , @soluong ";
                         DataProvider.Instance.ExecuteNonQuery(queryUDSLT, new object[] {Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                     Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbHangton.Text) - Convert.ToInt32(txtSoLuong.Text)});
-                        String UDTGBH = "execute TGBHConLai1 @mahd , @masp , @mach , @mamau ";
-                        DataProvider.Instance.ExecuteNonQuery(UDTGBH, new object[] { Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue), Convert.ToInt32(cbxMauSac.SelectedValue) });
-
+                      
                         string querygvm = "execute gvgiohang1 @ma ";
                         DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
                         gvHDBH.DataSource = gvgiohang;
                         loadcombocox();
+                        hienthitongtien();
                         txtSoLuong.ResetText();
                         btnThanhToan.Enabled = true;
                         gvSeachHD.Visible = false;
@@ -485,7 +507,40 @@ namespace ThucTapCM
             DialogResult xoaCTHDX = MessageBox.Show("Bạn có muốn xóa không ???", "Xóa", MessageBoxButtons.YesNo);
             if (xoaCTHDX == DialogResult.Yes)
             {
-                
+                //delete
+                string masp = "select MaSP from SanPham  where TenSp =N'" + Convert.ToString(ten.Trim()) + "'";
+                DataTable xmasp = DataProvider.Instance.ExecuteQuery(masp);
+                Console.WriteLine(xmasp.Rows.Count);
+                int ma = Convert.ToInt32(xmasp.Rows[0]["MaSP"].ToString());
+
+                string mach = "select MaCauHinh from SP_CauHinh where TenCauHinh =N'" + Convert.ToString(cauhinh.Trim()) + "'";
+                DataTable xmach = DataProvider.Instance.ExecuteQuery(mach);
+                int maCH = Convert.ToInt32(xmach.Rows[0]["MaCauHinh"].ToString());
+
+                string mamau = "select MaMau from SP_Mau where TenMau =N'" + Convert.ToString(mausac.Trim()) + "'";
+                DataTable xmamau = DataProvider.Instance.ExecuteQuery(mamau);
+                int maMau = Convert.ToInt32(xmamau.Rows[0]["MaMau"].ToString());
+                string deletegiohangN = "execute deletegiohangban @mahd , @masp , @macauhinh , @mamau ";
+                DataProvider.Instance.ExecuteNonQuery(deletegiohangN, new object[] {Convert.ToInt32(lbMHD.Text), Convert.ToInt32(ma.ToString()), Convert.ToInt32(maCH.ToString()), Convert.ToInt32(maMau.ToString()) });
+
+                //udtien
+                String queryUDTT = "execute updatetien2 @mahdx ";
+                DataProvider.Instance.ExecuteNonQuery(queryUDTT, new object[] { Convert.ToInt32(lbMHD.Text) });
+
+                //udsl
+                   DataProvider.Instance.ExecuteNonQuery("update CTSanPham set SoLuong = SoLuong + @soluong where MaSP = @ten and MaCauHinh = @cauhinh and MaMau = @tenmau", new object[] {Convert.ToInt32(soluong), Convert.ToInt32(ma.ToString()), Convert.ToInt32(maCH.ToString()), Convert.ToInt32(maMau.ToString()) });
+                //delete bao hanh
+                DataProvider.Instance.ExecuteNonQuery("delete TKTGBH where MaHDBH = @ma and masp = @masp and mach = @mach and mamau = @mamau ",new object[] { Convert.ToInt32(lbMHD.Text), Convert.ToInt32(ma.ToString()), Convert.ToInt32(maCH.ToString()), Convert.ToInt32(maMau.ToString()) });
+                //hienthitongtien
+
+
+                MessageBox.Show("Delete Success !", "Success");
+                string querygvm = "execute gvgiohang1 @ma ";
+                DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { lbMHD.Text });
+                gvHDBH.DataSource = gvgiohang;
+                loadcombocox();
+                hienthitongtien();
+                txtSoLuong.ResetText();
 
             }
         }
@@ -555,6 +610,7 @@ namespace ThucTapCM
                 this.Hide();
                 main.Show();
             }
+            else if (data.Rows.Count >=0)
             {
                 DialogResult a = MessageBox.Show("Bạn có muốn hủy hóa đơn này không ?", "Hủy", MessageBoxButtons.YesNo);
                 if (a == DialogResult.Yes)
@@ -574,6 +630,41 @@ namespace ThucTapCM
             {
                 e.Handled = true;
             }
+        }
+        
+        DateTime  newtime;
+        void baohanh()
+        {
+            String query = "select * from SanPham where MaSP = '"+Convert.ToInt32(cbxSanPham.SelectedValue)+"'";
+            DataTable HD = DataProvider.Instance.ExecuteQuery(query);
+            int tgbh = int.Parse(HD.Rows[0]["ThoiGianBH"].ToString());
+
+            String query1 = "select * from HoaDonBanHang where MaHD = '" + Convert.ToInt32(lbMHD.Text) + "'";
+            DataTable HD1 = DataProvider.Instance.ExecuteQuery(query1);
+            DateTime ngayxuat = DateTime.Parse(HD1.Rows[0]["NgayXuat"].ToString());
+            if (Convert.ToInt32(tgbh.ToString()) < 12)
+            {
+                DateTime aDateTime = Convert.ToDateTime(ngayxuat.ToString());
+                newtime = aDateTime.AddMonths(+Convert.ToInt32(tgbh.ToString()));
+            }
+            if (Convert.ToInt32(tgbh.ToString()) >= 12)
+            {
+                //int a = Convert.ToInt32(tgbh.ToString()) / 12;
+               // int b = Convert.ToInt32(tgbh.ToString()) % 12;
+                DateTime aDateTime = Convert.ToDateTime(ngayxuat.ToString());
+                newtime = aDateTime.AddMonths(+Convert.ToInt32(tgbh.ToString()));
+              //  newtime = aDateTime.AddYears(+Convert.ToInt32(a));
+            }
+
+            string querygvm = "Select * from HDBH_SP Where MaHD = @mahd ";
+            DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { Convert.ToInt32(lbMHD.Text) });
+            foreach (DataRow item in gvgiohang.Rows)
+            {
+
+                DataProvider.Instance.ExecuteNonQuery("update TKTGBH set thoigianconlai = @tg where MaHDBH = @ma and masp = @masp and mach = @cauhinh and mamau = @tenmau", new object[] { Convert.ToDateTime(newtime), Convert.ToInt32(lbMHD.Text), Convert.ToInt32(item[1].ToString()), Convert.ToInt32(item[2].ToString()), Convert.ToInt32(item[3].ToString()) });
+
+            }
+
         }
     }
 }

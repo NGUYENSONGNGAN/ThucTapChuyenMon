@@ -430,6 +430,7 @@ namespace ThucTapCM
         string sanpham;
         string cauhinh;
         string mausac;
+        string soluong;
 
         private void gvHDNH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -437,6 +438,7 @@ namespace ThucTapCM
             sanpham = gvHDNH.Rows[r].Cells[0].Value.ToString();
             cauhinh = gvHDNH.Rows[r].Cells[1].Value.ToString();
             mausac = gvHDNH.Rows[r].Cells[2].Value.ToString();
+            soluong=gvHDNH.Rows[r].Cells[3].Value.ToString();
             btnDelete.Enabled = true;
         }
 
@@ -462,6 +464,8 @@ namespace ThucTapCM
                 DataProvider.Instance.ExecuteNonQuery(deletegiohangN, new object[] { Convert.ToInt32(Convert.ToInt32(lbMHD.Text)), Convert.ToInt32(ma.ToString()), Convert.ToInt32(maCH.ToString()), Convert.ToInt32(maMau.ToString()) });
 
                 MessageBox.Show("Delete Success !", "Success");
+
+                //ud slt
 
                 string giohang = "execute gvgiohangnhap1 @ma ";
                 DataTable giohangnhap = DataProvider.Instance.ExecuteQuery(giohang, new object[] { Convert.ToInt32(lbMHD.Text) });

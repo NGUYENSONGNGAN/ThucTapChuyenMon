@@ -71,6 +71,8 @@ namespace ThucTapCM
             this.btnAddHD = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbTongtien = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvSeachHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -110,6 +112,8 @@ namespace ThucTapCM
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbTongtien);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.lbHangton);
             this.groupBox2.Controls.Add(this.gvSeachHD);
             this.groupBox2.Controls.Add(this.bunifuMetroTextbox1);
@@ -130,7 +134,7 @@ namespace ThucTapCM
             this.groupBox2.Location = new System.Drawing.Point(3, 152);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox2.Size = new System.Drawing.Size(1355, 531);
+            this.groupBox2.Size = new System.Drawing.Size(1355, 612);
             this.groupBox2.TabIndex = 123;
             this.groupBox2.TabStop = false;
             // 
@@ -530,7 +534,7 @@ namespace ThucTapCM
             this.btnThanhToan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThanhToan.IconSize = 54;
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThanhToan.Location = new System.Drawing.Point(29, 715);
+            this.btnThanhToan.Location = new System.Drawing.Point(34, 790);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(378, 56);
             this.btnThanhToan.TabIndex = 126;
@@ -552,7 +556,7 @@ namespace ThucTapCM
             this.btnDeleteHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeleteHD.IconSize = 54;
             this.btnDeleteHD.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeleteHD.Location = new System.Drawing.Point(821, 715);
+            this.btnDeleteHD.Location = new System.Drawing.Point(826, 790);
             this.btnDeleteHD.Name = "btnDeleteHD";
             this.btnDeleteHD.Size = new System.Drawing.Size(287, 56);
             this.btnDeleteHD.TabIndex = 125;
@@ -574,7 +578,7 @@ namespace ThucTapCM
             this.btnAddHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddHD.IconSize = 54;
             this.btnAddHD.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAddHD.Location = new System.Drawing.Point(499, 715);
+            this.btnAddHD.Location = new System.Drawing.Point(504, 790);
             this.btnAddHD.Name = "btnAddHD";
             this.btnAddHD.Size = new System.Drawing.Size(248, 56);
             this.btnAddHD.TabIndex = 124;
@@ -604,11 +608,32 @@ namespace ThucTapCM
             this.label8.TabIndex = 128;
             this.label8.Text = "Lập Hóa Đơn Bán Hàng";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label12.Location = new System.Drawing.Point(582, 549);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(222, 44);
+            this.label12.TabIndex = 136;
+            this.label12.Text = "Tổng Tiền :";
+            // 
+            // lbTongtien
+            // 
+            this.lbTongtien.AutoSize = true;
+            this.lbTongtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongtien.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbTongtien.Location = new System.Drawing.Point(878, 549);
+            this.lbTongtien.Name = "lbTongtien";
+            this.lbTongtien.Size = new System.Drawing.Size(0, 44);
+            this.lbTongtien.TabIndex = 137;
+            // 
             // HBBanHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(174)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(1361, 805);
+            this.ClientSize = new System.Drawing.Size(1361, 885);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnThanhToan);
@@ -668,5 +693,7 @@ namespace ThucTapCM
         private System.Windows.Forms.TextBox lbHangton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbTongtien;
+        private System.Windows.Forms.Label label12;
     }
 }
