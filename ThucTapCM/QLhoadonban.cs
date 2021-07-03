@@ -58,17 +58,7 @@ namespace ThucTapCM
         }
         private void picvoice_Click(object sender, EventArgs e)
         {
-            voice++;
-            if (voice % 2 == 0)
-            {
-                RecognizerState = false;
-                //btnMute.Image = Image.FromFile("..//..//..//..//image//icons8-mute-unmute-100.png");
-            }
-            else if (voice % 2 == 1)
-            {
-                //btnMute.Image = Image.FromFile("..//..//..//..//image//icons8-microphone-100.png");
-                RecognizerState = true;
-            }
+            
         }
 
         private void QLhoadonban_Load(object sender, EventArgs e)
@@ -132,6 +122,21 @@ namespace ThucTapCM
             Main main = new Main();
             this.Hide();
             main.Show();
+        }
+
+        private void picvoice_Click_1(object sender, EventArgs e)
+        {
+            voice++;
+            if (voice % 2 == 0)
+            {
+                RecognizerState = false;
+                //btnMute.Image = Image.FromFile("..//..//..//..//image//icons8-mute-unmute-100.png");
+            }
+            else if (voice % 2 == 1)
+            {
+                //btnMute.Image = Image.FromFile("..//..//..//..//image//icons8-microphone-100.png");
+                RecognizerState = true;
+            }
         }
     }
 

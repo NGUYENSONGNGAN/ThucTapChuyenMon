@@ -26,7 +26,7 @@ namespace ThucTapCM
         int MNV = txtPassWord.id;
         private void picNCC_Click(object sender, EventArgs e)
         {
-            FormTTNCC tTNCC = new FormTTNCC();
+            FormTTNCC tTNCC = new FormTTNCC(1);
             this.Hide();
             tTNCC.Show();
         }
@@ -390,7 +390,7 @@ namespace ThucTapCM
                     }
                     else if (HDNLHD1.Rows.Count >= 1)
                     {
-                        string inserintoHDN_SP = "execute insertHDN_SP1 @ma , @mansp , @macauhinh , @mamau , @soluong , @dongia, @thanhtien ";
+                        string inserintoHDN_SP = "execute insertHDN_SP1 @ma , @mansp , @macauhinh , @mamau , @soluong , @dongia , @thanhtien ";
                         DataProvider.Instance.ExecuteNonQuery(inserintoHDN_SP, new object[] {Convert.ToInt32(lbMHD.Text), Convert.ToInt32(cbxSanPham.SelectedValue), Convert.ToInt32(cbxCauHinh.SelectedValue),
                                Convert.ToInt32(cbxMauSac.SelectedValue), Convert.ToInt32(lbsoluong.Text), Convert.ToInt32(lbdongia.Text),Convert.ToInt32(lbsoluong.Text) * Convert.ToInt32(lbdongia.Text) });
                         double tongtien = 0;
@@ -479,6 +479,7 @@ namespace ThucTapCM
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+           
             Main main = new Main();
             this.Hide();
             main.Show();

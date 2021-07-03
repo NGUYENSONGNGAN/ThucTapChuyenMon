@@ -210,6 +210,21 @@ namespace ThucTapCM
                     }
                 }
             }
+            lbMKH.Visible = false;
+            lbDTL.Visible = false;
+            lbLKH.Visible = false;
+            txtName.ResetText();
+            txtGmail.ResetText();
+            txtPhone.ResetText();
+            txtAdress.ResetText();
+            txtName.Enabled = false;
+            txtPhone.Enabled = false;
+            txtAdress.Enabled = false;
+            txtGmail.Enabled = false;
+            btnAdd.Enabled = true;
+            btnReset.Enabled = false;
+            btnSave.Enabled = false;
+            btnHuy.Enabled = true;
         }
 
         private void FormTTKhachHang_Load(object sender, EventArgs e)

@@ -82,10 +82,10 @@ namespace ThucTapCM
             // Đinh dạng cột
             worksheet.Range["A1"].ColumnWidth = 7;
             worksheet.Range["B1"].ColumnWidth = 35;
-            worksheet.Range["C1"].ColumnWidth = 29;
+            worksheet.Range["C1"].ColumnWidth = 40;
             worksheet.Range["D1"].ColumnWidth = 33;
             worksheet.Range["E1"].ColumnWidth = 31;
-            worksheet.Range["F1"].ColumnWidth = 22;
+            worksheet.Range["F1"].ColumnWidth = 40;
             worksheet.Range["G1"].ColumnWidth = 22;
 
 

@@ -86,7 +86,8 @@ namespace ThucTapCM
             txtNameSP.Enabled = true;
             txtDonGia.Enabled = true;
             txtTGBH.Enabled = true;
-            txtNameSP.Focus();            
+            txtNameSP.Focus();
+            lbMSP.Visible = true;
         }
 
         private void btnImg_Click(object sender, EventArgs e)
@@ -116,6 +117,7 @@ namespace ThucTapCM
             btnSaveSP.Enabled = true;
             btnHuySP.Enabled = true;
             btnImg.Visible = true;
+            lbMSP.Visible = true;
         }
 
         private void btnSaveSP_Click(object sender, EventArgs e)
@@ -546,7 +548,6 @@ namespace ThucTapCM
                 txtDonGia.Enabled = false;
                 txtNameSP.Enabled = false;
                 txtTGBH.Enabled = false;
-                lbMSP.Visible = false;
 
                 gvTTSP.DataSource = seach;
 

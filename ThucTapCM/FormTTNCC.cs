@@ -15,8 +15,15 @@ namespace ThucTapCM
     public partial class FormTTNCC : Form
     {
         int i ;
+        int loaiform = 0; 
         public FormTTNCC()
         {
+            InitializeComponent();
+            loaddata();
+        }
+        public FormTTNCC(int moform)
+        {
+            this.loaiform = moform;
             InitializeComponent();
             loaddata();
         }
@@ -49,8 +56,8 @@ namespace ThucTapCM
             DialogResult xoa = MessageBox.Show("Bạn có muốn xóa không ???", "Xóa", MessageBoxButtons.YesNo);
             if (xoa == DialogResult.Yes)
             {
-                string query = "execute DeleteNCC @ma ";
-                DataProvider.Instance.ExecuteNonQuery(query, new object[] { lbMNCC.Text });
+                string query = "Delete NhaCungCap where MaNCC = '"+ lbMNCC.Text + "' ";
+                DataProvider.Instance.ExecuteNonQuery(query);
                 loaddata();
             }
         }
@@ -188,9 +195,19 @@ namespace ThucTapCM
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            this.Hide();
-            main.Show();
+            if(loaiform == 2)
+            {
+                Main main = new Main();
+                this.Close();
+                main.Show();
+            }
+            else if(loaiform ==1)
+            {
+                HoaDonNhapHang hoaDonNhap = new HoaDonNhapHang();
+                this.Close();
+                hoaDonNhap.Show();
+            }    
+           
         }
 
         private void dtGVNCC_CellClick_1(object sender, DataGridViewCellEventArgs e)

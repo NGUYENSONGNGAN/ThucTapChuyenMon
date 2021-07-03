@@ -139,7 +139,7 @@ namespace ThucTapCM
         private void btnTTNCC_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            FormTTNCC tTNCC = new FormTTNCC();
+            FormTTNCC tTNCC = new FormTTNCC(2);
             this.Hide();
             tTNCC.Show();
         }
@@ -213,7 +213,7 @@ namespace ThucTapCM
             formChat.Dock = DockStyle.Fill;
             formChat.Show();
             pnlchatkh.Visible = false;
-            PnChat.Visible = false;
+            //PnChat.Visible = false;
 
 
             string querySL = "select Count(MaHD)  N'SoLuong' From HoaDonBanHang";

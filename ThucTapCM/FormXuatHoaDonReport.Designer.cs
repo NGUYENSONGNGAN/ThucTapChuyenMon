@@ -57,16 +57,15 @@ namespace ThucTapCM
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.reportViewer1.DocumentMapWidth = 1;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.gvgiohang6BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ThucTapCM.ReportXuatHoaDon.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 4);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(2000, 800);
+            this.reportViewer1.Size = new System.Drawing.Size(1268, 656);
             this.reportViewer1.TabIndex = 0;
             // 
             // gvgiohang6TableAdapter
@@ -76,7 +75,7 @@ namespace ThucTapCM
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1879, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(1208, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -87,7 +86,7 @@ namespace ThucTapCM
             // FormXuatHoaDonReport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1942, 734);
+            this.ClientSize = new System.Drawing.Size(1272, 672);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

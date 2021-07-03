@@ -58,18 +58,19 @@ namespace ThucTapCM
         {
             if (btrThu.Checked )
             {
+
+                string query = "execute DanhSachHDXtTrongNam  @nam ";
+                DataTable DSHDB = DataProvider.Instance.ExecuteQuery(query, new object[] { Convert.ToInt32(cbxNam.SelectedValue) });
+                gvthuchi.DataSource = DSHDB;
+
+            }
+            if (btrChi.Checked)
+            {
+               
                 string query = "execute DanhSachHDNTrongNam  @nam ";
                 DataTable DSHDN = DataProvider.Instance.ExecuteQuery(query, new object[] { Convert.ToInt32(cbxNam.SelectedValue) });
                 gvthuchi.DataSource = DSHDN;
 
-               
-            }
-            if (btrChi.Checked)
-            {
-                string query = "execute DanhSachHDXtTrongNam  @nam ";
-                DataTable DSHDB = DataProvider.Instance.ExecuteQuery(query, new object[] { Convert.ToInt32(cbxNam.SelectedValue) });
-                gvthuchi.DataSource = DSHDB;
-               
             }
         }
 

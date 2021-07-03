@@ -18,7 +18,7 @@ namespace ThucTapCM
     public partial class HBBanHang : Form
     {
         int MKHM = CreateCurtomer.MKHM;
-        int MKHC = CurtomerCheck.MKH;
+        int MKHC = CurtomerCheck.MKHC;
         int i = 0;
         int MKH =0 ;
         float dongia;
@@ -117,8 +117,11 @@ namespace ThucTapCM
             int r = gvSeachHD.CurrentRow.Index;
             cbxSanPham.Text = gvSeachHD.Rows[r].Cells[1].Value.ToString();
             gvSeachHD.Visible = false;
-            
-            
+            bunifuMetroTextbox1.ResetText();
+
+
+
+
         }
         void loadcombocox()
         {

@@ -18,7 +18,7 @@ namespace ThucTapCM
         {
             InitializeComponent();
         }
-        public static int MKH = 0;
+        public static int MKHC = 0;
 
         private void btnFind_Click(object sender, EventArgs e)
         {
@@ -41,9 +41,9 @@ namespace ThucTapCM
                         string query2 = "select MaKH from KhachHang Where TenKH = '" + txtCheckName.Text + "' and SoDienThoai = '" + txtCheckSĐT.Text + "'";
                         DataTable a1 = DataProvider.Instance.ExecuteQuery(query);
                         string a = a1.Rows[0]["MaKH"].ToString();
-                        MKH = Convert.ToInt32((a).ToString());
+                        MKHC = Convert.ToInt32((a).ToString());
                         MessageBox.Show("Wellcome !!!!");
-                        HBBanHang hBBanHang = new HBBanHang(MKH);
+                        HBBanHang hBBanHang = new HBBanHang(MKHC);
                         this.Hide();
                         hBBanHang.Show();
                     }
@@ -54,7 +54,7 @@ namespace ThucTapCM
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            MKH = 0;
+            MKHC = 0;
             HDBHMenu hDBH = new HDBHMenu();
             this.Hide();
             hDBH.Show();

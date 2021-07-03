@@ -188,9 +188,9 @@ namespace ThucTapCM
             // pnsphet
             // 
             this.pnsphet.Controls.Add(this.lbDTL);
-            this.pnsphet.Location = new System.Drawing.Point(18, 219);
+            this.pnsphet.Location = new System.Drawing.Point(14, 219);
             this.pnsphet.Name = "pnsphet";
-            this.pnsphet.Size = new System.Drawing.Size(1420, 454);
+            this.pnsphet.Size = new System.Drawing.Size(1424, 444);
             this.pnsphet.TabIndex = 151;
             // 
             // lbDTL
@@ -430,9 +430,9 @@ namespace ThucTapCM
             this.lbThanhTien.AutoSize = true;
             this.lbThanhTien.Location = new System.Drawing.Point(1054, 617);
             this.lbThanhTien.Name = "lbThanhTien";
-            this.lbThanhTien.Size = new System.Drawing.Size(46, 17);
+            this.lbThanhTien.Size = new System.Drawing.Size(16, 17);
             this.lbThanhTien.TabIndex = 143;
-            this.lbThanhTien.Text = "label6";
+            this.lbThanhTien.Text = "0";
             // 
             // lbsoluong
             // 
@@ -522,7 +522,7 @@ namespace ThucTapCM
             this.gvSeachHD.RowHeadersVisible = false;
             this.gvSeachHD.RowHeadersWidth = 51;
             this.gvSeachHD.RowTemplate.Height = 24;
-            this.gvSeachHD.Size = new System.Drawing.Size(495, 423);
+            this.gvSeachHD.Size = new System.Drawing.Size(495, 415);
             this.gvSeachHD.TabIndex = 149;
             this.gvSeachHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSeachHD_CellClick_1);
             // 

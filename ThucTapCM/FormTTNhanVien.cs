@@ -80,7 +80,7 @@ namespace ThucTapCM
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            this.Hide();
+            this.Close();
             main.Show();
         }
 
@@ -118,7 +118,7 @@ namespace ThucTapCM
             int r = gvTTNV.CurrentRow.Index;
             lbMaNV.Text = gvTTNV.Rows[r].Cells[0].Value.ToString();
             to = (Convert.ToInt32((lbMaNV.Text).ToString()));
-            btnDelete.Enabled = true;
+            //btnDelete.Enabled = true;
             bunifuThinButton21.Enabled = true;
             lbMaNV.Visible = false;
         }

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ThucTapCM.DAO;
+using DataTable = System.Data.DataTable;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace ThucTapCM
 {
@@ -73,6 +76,88 @@ namespace ThucTapCM
             Main main = new Main();
             this.Close();
             main.Show();
+        }
+
+        private void txtseach_OnValueChanged(object sender, EventArgs e)
+        {
+            DataTable seach = DataProvider.Instance.ExecuteQuery("execute  SeachBH @Ten ", new object[] { txtseach.Text });
+            gvTKBH.DataSource = seach;
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+
+
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            app.Visible = true;
+            // Dua du lieu vao excel
+            worksheet.Cells[1, 4] = "Bảng Thống Thời Gian Bảo Hành Các Sản Phẩm  ";
+            worksheet.Cells[2, 3] = "";
+            worksheet.Cells[3, 1] = "STT";
+            worksheet.Cells[3, 2] = "Mã Hóa Đơn";
+            worksheet.Cells[3, 3] = "Tên Sản Phẩm";
+            worksheet.Cells[3, 4] = "Tên Cấu Hình";
+            worksheet.Cells[3, 5] = "Tên Màu";
+            worksheet.Cells[3, 6] = "Thời Hạn Bảo hành";
+
+            for (int i = 0; i < gvTKBH.RowCount; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    worksheet.Cells[i + 4, 1] = i + 1;
+                    worksheet.Cells[i + 4, j + 2] = gvTKBH.Rows[i].Cells[j].Value;
+                }
+            }
+            int dem = gvTKBH.RowCount;
+
+
+            // Định dạng trang
+            worksheet.PageSetup.Orientation = Microsoft.Office.Interop.Excel.XlPageOrientation.xlPortrait;
+            worksheet.PageSetup.PaperSize = Microsoft.Office.Interop.Excel.XlPaperSize.xlPaperA4;
+            worksheet.PageSetup.LeftMargin = 0;
+            worksheet.PageSetup.RightMargin = 0;
+            worksheet.PageSetup.TopMargin = 0;
+            worksheet.PageSetup.BottomMargin = 0;
+
+            // Đinh dạng cột
+            worksheet.Range["A1"].ColumnWidth = 7;
+            worksheet.Range["B1"].ColumnWidth = 25;
+            worksheet.Range["C1"].ColumnWidth = 45;
+            worksheet.Range["D1"].ColumnWidth = 50;
+            worksheet.Range["E1"].ColumnWidth = 30;
+            worksheet.Range["F1"].ColumnWidth = 31;
+
+
+
+            // Định dạng font chữ
+            //     worksheet.Range["A1", "J100"].Font.Name = "";
+            worksheet.Range["A1", "A100"].Font.Size = 24;
+            worksheet.Range["A3", "J100"].Font.Size = 16;
+            worksheet.Range["A1", "F1"].MergeCells = true;
+            worksheet.Range["A1", "F1"].Font.Bold = true;
+
+            //worksheet.Range["A3", "J3"].MergeCells = true;
+            worksheet.Range["A3", "F3"].Font.Bold = true;
+
+            // kẻ bảng
+            worksheet.Range["A3", "F" + (dem + 3)].Borders.LineStyle = 1;
+
+
+            //Định dạng dòng text
+            worksheet.Range["A1", "F1"].HorizontalAlignment = 3;
+            worksheet.Range["A3", "F3"].HorizontalAlignment = 3;
+            worksheet.Range["A4", "F" + (dem + 4)].HorizontalAlignment = 3;
+            worksheet.Range["B4", "F" + (dem + 4)].HorizontalAlignment = 3;
+            worksheet.Range["C4", "F" + (dem + 4)].HorizontalAlignment = 3;
+            worksheet.Range["D4", "F" + (dem + 4)].HorizontalAlignment = 3;
+            worksheet.Range["E4", "F" + (dem + 4)].HorizontalAlignment = 3;
+            worksheet.Range["F4", "F" + (dem + 4)].HorizontalAlignment = 3;
+
         }
     }
 }

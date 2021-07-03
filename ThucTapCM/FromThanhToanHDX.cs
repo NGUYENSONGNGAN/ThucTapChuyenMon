@@ -79,7 +79,7 @@ namespace ThucTapCM
             {
                 string udateHDB = "update HoaDonBanHang set TrangThai = 1 , GhiChu =  '" +Convert.ToString( txtghichu.Text) + "'where MaHD ='" + Convert.ToInt32(MHDBH) + "'";
                 DataProvider.Instance.ExecuteNonQuery(udateHDB);
-                FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
+                FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport(MHDB, 1);
                 this.Close();
                 xuatHoaDonReport.Show();
             }

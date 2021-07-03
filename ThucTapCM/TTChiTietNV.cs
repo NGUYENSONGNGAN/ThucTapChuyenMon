@@ -173,9 +173,9 @@ namespace ThucTapCM
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            this.Hide();
-            main.Show();
+            FormTTNhanVien formTTNhanVien = new FormTTNhanVien();
+            this.Close();
+            formTTNhanVien.Show();
         }
 
         private void txtPhoneNVCT_KeyPress(object sender, KeyPressEventArgs e)

@@ -63,7 +63,7 @@ namespace ThucTapCM
             worksheet.Cells[3, 3] = "Khách Hàng";
             worksheet.Cells[3, 4] = "Sản Phẩm";
             worksheet.Cells[3, 5] = "Màu";
-            worksheet.Cells[3, 6] = "Size";
+            worksheet.Cells[3, 6] = "Cấu Hình";
             worksheet.Cells[3, 7] = "Số Lượng";
 
             for (int i = 0; i < gvTKKH.RowCount; i++)
@@ -89,9 +89,9 @@ namespace ThucTapCM
             worksheet.Range["A1"].ColumnWidth = 7;
             worksheet.Range["B1"].ColumnWidth = 25;
             worksheet.Range["C1"].ColumnWidth = 29;
-            worksheet.Range["D1"].ColumnWidth = 33;
+            worksheet.Range["D1"].ColumnWidth = 40;
             worksheet.Range["E1"].ColumnWidth = 31;
-            worksheet.Range["F1"].ColumnWidth = 22;
+            worksheet.Range["F1"].ColumnWidth = 40;
             worksheet.Range["G1"].ColumnWidth = 23;
 
 

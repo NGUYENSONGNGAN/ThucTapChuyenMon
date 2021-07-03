@@ -178,7 +178,7 @@ namespace ThucTapCM
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             FormTTNhanVien formTTNhan = new FormTTNhanVien();
-            this.Hide();
+            this.Close();
             formTTNhan.Show();
         }
     }
