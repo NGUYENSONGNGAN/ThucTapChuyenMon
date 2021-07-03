@@ -49,7 +49,7 @@ namespace ThucTapCM
                
                 MessageBox.Show("well come SNN!!!", "say hi", MessageBoxButtons.OK);
 				Main main = new Main();
-				this.Hide();
+                this.Hide();
 				main.Show();
 
             }

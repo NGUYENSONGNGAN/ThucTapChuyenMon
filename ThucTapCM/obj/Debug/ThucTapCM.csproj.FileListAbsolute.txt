@@ -22,7 +22,6 @@ D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.c
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.csproj.CopyComplete
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.exe
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.pdb
-D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.csprojAssemblyReference.cache
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.HBBanHang.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.BackUpData.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormChat.resources
@@ -121,3 +120,4 @@ D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.A
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.AHDXuat.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormTTKH.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormXuatHoaDonReport.resources
+D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.csprojAssemblyReference.cache

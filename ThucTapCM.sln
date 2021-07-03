@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatKhachHang", "ChatKhachH
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{438FBE4B-6D8B-4908-A6B5-E94B1B41AF93}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupNSNShop", "SetupNSNShop\SetupNSNShop.vdproj", "{A273C5AA-DE94-4AEA-A547-75A8E5D7B0FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,8 @@ Global
 		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1EE2159-AB65-4D4C-B4B2-9DE88C60B43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A273C5AA-DE94-4AEA-A547-75A8E5D7B0FE}.Debug|Any CPU.ActiveCfg = Debug
+		{A273C5AA-DE94-4AEA-A547-75A8E5D7B0FE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

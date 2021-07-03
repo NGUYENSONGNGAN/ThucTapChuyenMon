@@ -14,8 +14,11 @@ namespace ThucTapCM
 {
     public partial class ThongKeHangTon : Form
     {
+    
+
         public ThongKeHangTon()
         {
+
             InitializeComponent();
         }
 
@@ -114,9 +117,11 @@ namespace ThucTapCM
             worksheet.Range["H4", "G" + (dem + 4)].HorizontalAlignment = 3;
 
         }
+        public static Main m = null;
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+        
             Main main = new Main();
             this.Close();
             main.Show();

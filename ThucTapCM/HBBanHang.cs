@@ -20,7 +20,7 @@ namespace ThucTapCM
         int MKHM = CreateCurtomer.MKHM;
         int MKHC = CurtomerCheck.MKH;
         int i = 0;
-        int MKH = 0;
+        int MKH =0 ;
         float dongia;
         public static int MHDBH;
         public static MemoryStream stream;
@@ -29,6 +29,15 @@ namespace ThucTapCM
         {
             InitializeComponent();
              
+            loadcombocox();
+            loaddata();
+        }
+
+        public HBBanHang(int ma)
+        {
+            this.MKH = ma;
+            InitializeComponent();
+
             loadcombocox();
             loaddata();
         }
@@ -52,14 +61,7 @@ namespace ThucTapCM
                 // int a = Convert.ToInt32()
             }
             MHDBH = Convert.ToInt32(lbMHD.Text);
-            if (MKHC == 0)
-            {
-                MKH = MKHM;
-            }
-            else if (MKHM == 0)
-            {
-                MKH = MKHC;
-            }
+            
 
             string query1 = "execute selectKHHD1 '" + MKH + "'";
             DataTable name1 = DataProvider.Instance.ExecuteQuery(query1);
@@ -554,7 +556,8 @@ namespace ThucTapCM
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-           
+            MKHC = 0;
+            MKHM = 0;
             String query = "execute selectHDBH_SP @ma";
             DataTable HDBH_SP = DataProvider.Instance.ExecuteQuery(query ,new object[] {Convert.ToInt32( lbMHD.Text)});
             if (HDBH_SP.Rows.Count ==0)
@@ -600,9 +603,10 @@ namespace ThucTapCM
                 }
 
                    
-                    FromThanhToanHDX fromThanh = new FromThanhToanHDX();
-                this.Hide();
+                 FromThanhToanHDX fromThanh = new FromThanhToanHDX();
+                this.Close();
                 fromThanh.Show();
+                
             }
         }
 
@@ -613,9 +617,12 @@ namespace ThucTapCM
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if(data.Rows.Count<=0)
             {
+                MKHC = 0;
+                MKHM = 0;
                 Main main = new Main();
-                this.Hide();
+                this.Close();
                 main.Show();
+                
             }
             else if (data.Rows.Count >=0)
             {
@@ -625,7 +632,10 @@ namespace ThucTapCM
                     GhichuHoaDonBanHang ghichu = new GhichuHoaDonBanHang();
                     if(ghichu.ShowDialog() == DialogResult.Yes)
                     {
-                        this.Hide();
+                        MKHC = 0;
+                        MKHM = 0;
+                        this.Close();
+                        
                     }
                 }
             }   

@@ -29,7 +29,7 @@ namespace ThucTapCM
 
         private void btnXCT_Click(object sender, EventArgs e)
         {
-            FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
+            FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport(MaHDX,3);
             this.Hide();
             xuatHoaDonReport.Show();
         }
@@ -130,7 +130,7 @@ namespace ThucTapCM
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            this.Close();
+            this.Hide();
             main.Show();
         }
     }

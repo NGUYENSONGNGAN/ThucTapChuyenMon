@@ -480,7 +480,7 @@ namespace ThucTapCM
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            this.Close();
+            this.Hide();
             main.Show();
         }
 

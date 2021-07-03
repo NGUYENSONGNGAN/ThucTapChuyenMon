@@ -27,6 +27,8 @@ namespace ThucTapCM
             InitializeComponent();
             customizeDsing();
         }
+
+
         private void customizeDsing()
         {
             panelBanHang.Visible = false;
@@ -160,7 +162,9 @@ namespace ThucTapCM
         {
             hideSubMenu();
             ThongKeHangTon thongKeHangTon = new ThongKeHangTon();
+            ThongKeHangTon.m = this;
             this.Hide();
+            
             thongKeHangTon.Show();
         }
 
@@ -276,6 +280,7 @@ namespace ThucTapCM
             String name = DataProvider.Instance.ExecuteScalar(query1).ToString();
 
             lbTenlogin.Text = "Xin chào " + name;
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

@@ -70,7 +70,8 @@ namespace ThucTapCM
                 DialogResult a = MessageBox.Show("Chưa có ghi chú \n Bạn có muốn tiếp tục xuất hóa đơn?", "Hủy", MessageBoxButtons.YesNo);
                 if (a == DialogResult.Yes)
                 {
-                    FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
+                    FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport(MHDB,1);
+                   
                     this.Close();
                     xuatHoaDonReport.Show();
                 }

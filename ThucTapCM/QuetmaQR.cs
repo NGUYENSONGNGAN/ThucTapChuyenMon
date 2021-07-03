@@ -35,6 +35,7 @@ namespace ThucTapCM
             QLhoadonban qLhoadonban = new QLhoadonban();
             this.Hide();
             qLhoadonban.Show();
+            TTTK.MaHDX = 0;
             if (timer1.Enabled == true)
             {
                 timer1.Enabled = false;
@@ -108,7 +109,7 @@ namespace ThucTapCM
                             {
                                 TTTK.Load++;
                                 btnketnoi_Click(sender, e);
-                                FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
+                                FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport(Convert.ToInt32(MaHDX),2);
                                 this.Hide();
                                 xuatHoaDonReport.Show();
                             }

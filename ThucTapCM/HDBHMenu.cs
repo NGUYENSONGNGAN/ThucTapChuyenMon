@@ -35,7 +35,7 @@ namespace ThucTapCM
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            this.Hide();
+            this.Close();
             main.Show();
         }
     }

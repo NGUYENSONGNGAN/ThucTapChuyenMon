@@ -16,7 +16,7 @@ namespace ThucTapCM
 {
     public partial class CreateCurtomer : Form
     {
-        static public int MKHM;
+        static public int MKHM = 0;
         public CreateCurtomer()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace ThucTapCM
                         if (add >= 1)
                         {
                             MessageBox.Show("Wellcome !", "Sucessful");
-                            HBBanHang HDBanHang = new HBBanHang();
+                            HBBanHang HDBanHang = new HBBanHang(MKHM);
                             this.Hide();
                             HDBanHang.Show();
                         }
