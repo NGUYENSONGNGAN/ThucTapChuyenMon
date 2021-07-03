@@ -62,12 +62,23 @@ namespace ThucTapCM
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbnvdt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tenNVt1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlchatkh = new System.Windows.Forms.Panel();
+            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.bunifuRating1 = new Bunifu.Framework.UI.BunifuRating();
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.lbslDon = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.lbdoanhthu = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lb1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.PnChat = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.PictureBox();
@@ -78,18 +89,7 @@ namespace ThucTapCM
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.lbtime = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbdoanhthu = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.lbslDon = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.tenNVt1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.lbnvdt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.pnlchatkh = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelKhoDL.SuspendLayout();
             this.panelTTQL.SuspendLayout();
@@ -104,6 +104,7 @@ namespace ThucTapCM
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
@@ -112,7 +113,6 @@ namespace ThucTapCM
             ((System.ComponentModel.ISupportInitialize)(this.picBackKup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFace)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -276,7 +276,7 @@ namespace ThucTapCM
             this.btnTTNCC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTTNCC.Name = "btnTTNCC";
             this.btnTTNCC.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTTNCC.Size = new System.Drawing.Size(269, 60);
+            this.btnTTNCC.Size = new System.Drawing.Size(269, 69);
             this.btnTTNCC.TabIndex = 3;
             this.btnTTNCC.Text = "Thông tin nhà cung cấp";
             this.btnTTNCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -383,11 +383,11 @@ namespace ThucTapCM
             this.btnTTHoadonN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTTHoadonN.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnTTHoadonN.ForeColor = System.Drawing.Color.Black;
-            this.btnTTHoadonN.Location = new System.Drawing.Point(0, 60);
+            this.btnTTHoadonN.Location = new System.Drawing.Point(0, 67);
             this.btnTTHoadonN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTTHoadonN.Name = "btnTTHoadonN";
             this.btnTTHoadonN.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTTHoadonN.Size = new System.Drawing.Size(269, 58);
+            this.btnTTHoadonN.Size = new System.Drawing.Size(269, 62);
             this.btnTTHoadonN.TabIndex = 3;
             this.btnTTHoadonN.Text = "Thông tin hóa đơn nhập";
             this.btnTTHoadonN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -407,7 +407,7 @@ namespace ThucTapCM
             this.btnHoadonN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHoadonN.Name = "btnHoadonN";
             this.btnHoadonN.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnHoadonN.Size = new System.Drawing.Size(269, 60);
+            this.btnHoadonN.Size = new System.Drawing.Size(269, 67);
             this.btnHoadonN.TabIndex = 2;
             this.btnHoadonN.Text = "Lập hóa đơn nhập hàng";
             this.btnHoadonN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -455,7 +455,7 @@ namespace ThucTapCM
             this.btnTTHoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTTHoadon.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTTHoadon.ForeColor = System.Drawing.Color.Black;
-            this.btnTTHoadon.Location = new System.Drawing.Point(0, 63);
+            this.btnTTHoadon.Location = new System.Drawing.Point(0, 73);
             this.btnTTHoadon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTTHoadon.Name = "btnTTHoadon";
             this.btnTTHoadon.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -480,7 +480,7 @@ namespace ThucTapCM
             this.btbHoadonB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btbHoadonB.Name = "btbHoadonB";
             this.btbHoadonB.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btbHoadonB.Size = new System.Drawing.Size(269, 63);
+            this.btbHoadonB.Size = new System.Drawing.Size(269, 73);
             this.btbHoadonB.TabIndex = 2;
             this.btbHoadonB.Text = "Lập hóa đơn bán hàng";
             this.btbHoadonB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -510,7 +510,7 @@ namespace ThucTapCM
             // 
             // pnlHome
             // 
-            this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(129)))), ((int)(((byte)(168)))));
+            this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.pnlHome.Controls.Add(this.pictureBox3);
             this.pnlHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHome.Location = new System.Drawing.Point(0, 0);
@@ -522,9 +522,9 @@ namespace ThucTapCM
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(284, 128);
+            this.pictureBox3.Size = new System.Drawing.Size(263, 120);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -627,6 +627,94 @@ namespace ThucTapCM
             this.panel3.Size = new System.Drawing.Size(542, 442);
             this.panel3.TabIndex = 2;
             // 
+            // lbnvdt
+            // 
+            this.lbnvdt.BorderColorFocused = System.Drawing.Color.Blue;
+            this.lbnvdt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbnvdt.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.lbnvdt.BorderThickness = 3;
+            this.lbnvdt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lbnvdt.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnvdt.ForeColor = System.Drawing.Color.Black;
+            this.lbnvdt.isPassword = false;
+            this.lbnvdt.Location = new System.Drawing.Point(300, 303);
+            this.lbnvdt.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.lbnvdt.Name = "lbnvdt";
+            this.lbnvdt.Size = new System.Drawing.Size(231, 57);
+            this.lbnvdt.TabIndex = 120;
+            this.lbnvdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tenNVt1
+            // 
+            this.tenNVt1.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tenNVt1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tenNVt1.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tenNVt1.BorderThickness = 3;
+            this.tenNVt1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tenNVt1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenNVt1.ForeColor = System.Drawing.Color.Black;
+            this.tenNVt1.isPassword = false;
+            this.tenNVt1.Location = new System.Drawing.Point(4, 303);
+            this.tenNVt1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.tenNVt1.Name = "tenNVt1";
+            this.tenNVt1.Size = new System.Drawing.Size(203, 57);
+            this.tenNVt1.TabIndex = 119;
+            this.tenNVt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(295, 251);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(239, 26);
+            this.label9.TabIndex = 117;
+            this.label9.Text = "Số đơn hàng bán được";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(28, 251);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 26);
+            this.label6.TabIndex = 114;
+            this.label6.Text = "Tên Nhân Viên :";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(214, 125);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(108, 85);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 112;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(165, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 26);
+            this.label5.TabIndex = 113;
+            this.label5.Text = "lón nhất hiện tại";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(87, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(353, 26);
+            this.label4.TabIndex = 112;
+            this.label4.Text = "Nhân viên bán hàng có doanh thu";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel4);
@@ -653,38 +741,12 @@ namespace ThucTapCM
             this.panel4.Size = new System.Drawing.Size(473, 595);
             this.panel4.TabIndex = 2;
             // 
-            // bunifuRating1
+            // pnlchatkh
             // 
-            this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRating1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.bunifuRating1.Location = new System.Drawing.Point(95, 207);
-            this.bunifuRating1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuRating1.Name = "bunifuRating1";
-            this.bunifuRating1.Size = new System.Drawing.Size(292, 48);
-            this.bunifuRating1.TabIndex = 116;
-            this.bunifuRating1.Value = 4;
-            // 
-            // lb1
-            // 
-            this.lb1.AutoSize = true;
-            this.lb1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1.ForeColor = System.Drawing.Color.Black;
-            this.lb1.Location = new System.Drawing.Point(59, 47);
-            this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(184, 26);
-            this.lb1.TabIndex = 112;
-            this.lb1.Text = "Tổng Doanh Thu";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(291, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 26);
-            this.label3.TabIndex = 113;
-            this.label3.Text = "Số Lượng Đơn";
+            this.pnlchatkh.Location = new System.Drawing.Point(105, 203);
+            this.pnlchatkh.Name = "pnlchatkh";
+            this.pnlchatkh.Size = new System.Drawing.Size(368, 391);
+            this.pnlchatkh.TabIndex = 118;
             // 
             // bunifuCircleProgressbar2
             // 
@@ -707,6 +769,95 @@ namespace ThucTapCM
             this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(163, 163);
             this.bunifuCircleProgressbar2.TabIndex = 2;
             this.bunifuCircleProgressbar2.Value = 25;
+            // 
+            // bunifuRating1
+            // 
+            this.bunifuRating1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRating1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bunifuRating1.Location = new System.Drawing.Point(95, 207);
+            this.bunifuRating1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuRating1.Name = "bunifuRating1";
+            this.bunifuRating1.Size = new System.Drawing.Size(292, 48);
+            this.bunifuRating1.TabIndex = 116;
+            this.bunifuRating1.Value = 4;
+            // 
+            // bunifuCircleProgressbar1
+            // 
+            this.bunifuCircleProgressbar1.animated = true;
+            this.bunifuCircleProgressbar1.animationIterval = 5;
+            this.bunifuCircleProgressbar1.animationSpeed = 40;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCircleProgressbar1.LabelVisible = true;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(64, 309);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.bunifuCircleProgressbar1.MaxValue = 100;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.White;
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.Red;
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(163, 163);
+            this.bunifuCircleProgressbar1.TabIndex = 1;
+            this.bunifuCircleProgressbar1.Value = 45;
+            // 
+            // lbslDon
+            // 
+            this.lbslDon.BorderColorFocused = System.Drawing.Color.Blue;
+            this.lbslDon.BorderColorIdle = System.Drawing.Color.Silver;
+            this.lbslDon.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.lbslDon.BorderThickness = 3;
+            this.lbslDon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lbslDon.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbslDon.ForeColor = System.Drawing.Color.Black;
+            this.lbslDon.isPassword = false;
+            this.lbslDon.Location = new System.Drawing.Point(311, 97);
+            this.lbslDon.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.lbslDon.Name = "lbslDon";
+            this.lbslDon.Size = new System.Drawing.Size(114, 44);
+            this.lbslDon.TabIndex = 117;
+            this.lbslDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbdoanhthu
+            // 
+            this.lbdoanhthu.BorderColorFocused = System.Drawing.Color.Blue;
+            this.lbdoanhthu.BorderColorIdle = System.Drawing.Color.Silver;
+            this.lbdoanhthu.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.lbdoanhthu.BorderThickness = 3;
+            this.lbdoanhthu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lbdoanhthu.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdoanhthu.ForeColor = System.Drawing.Color.Black;
+            this.lbdoanhthu.isPassword = false;
+            this.lbdoanhthu.Location = new System.Drawing.Point(36, 97);
+            this.lbdoanhthu.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.lbdoanhthu.Name = "lbdoanhthu";
+            this.lbdoanhthu.Size = new System.Drawing.Size(236, 44);
+            this.lbdoanhthu.TabIndex = 13;
+            this.lbdoanhthu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lb1
+            // 
+            this.lb1.AutoSize = true;
+            this.lb1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1.ForeColor = System.Drawing.Color.Black;
+            this.lb1.Location = new System.Drawing.Point(59, 47);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(184, 26);
+            this.lb1.TabIndex = 112;
+            this.lb1.Text = "Tổng Doanh Thu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(291, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 26);
+            this.label3.TabIndex = 113;
+            this.label3.Text = "Số Lượng Đơn";
             // 
             // PnChat
             // 
@@ -827,162 +978,11 @@ namespace ThucTapCM
             this.panel5.Size = new System.Drawing.Size(1020, 73);
             this.panel5.TabIndex = 11;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(87, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(353, 26);
-            this.label4.TabIndex = 112;
-            this.label4.Text = "Nhân viên bán hàng có doanh thu";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(165, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 26);
-            this.label5.TabIndex = 113;
-            this.label5.Text = "lón nhất hiện tại";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(214, 125);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(108, 85);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 112;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(28, 251);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 26);
-            this.label6.TabIndex = 114;
-            this.label6.Text = "Tên Nhân Viên :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(295, 251);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(239, 26);
-            this.label9.TabIndex = 117;
-            this.label9.Text = "Số đơn hàng bán được";
-            // 
-            // lbdoanhthu
-            // 
-            this.lbdoanhthu.BorderColorFocused = System.Drawing.Color.Blue;
-            this.lbdoanhthu.BorderColorIdle = System.Drawing.Color.Silver;
-            this.lbdoanhthu.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.lbdoanhthu.BorderThickness = 3;
-            this.lbdoanhthu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lbdoanhthu.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdoanhthu.ForeColor = System.Drawing.Color.Black;
-            this.lbdoanhthu.isPassword = false;
-            this.lbdoanhthu.Location = new System.Drawing.Point(36, 97);
-            this.lbdoanhthu.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.lbdoanhthu.Name = "lbdoanhthu";
-            this.lbdoanhthu.Size = new System.Drawing.Size(236, 44);
-            this.lbdoanhthu.TabIndex = 13;
-            this.lbdoanhthu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lbslDon
-            // 
-            this.lbslDon.BorderColorFocused = System.Drawing.Color.Blue;
-            this.lbslDon.BorderColorIdle = System.Drawing.Color.Silver;
-            this.lbslDon.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.lbslDon.BorderThickness = 3;
-            this.lbslDon.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lbslDon.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbslDon.ForeColor = System.Drawing.Color.Black;
-            this.lbslDon.isPassword = false;
-            this.lbslDon.Location = new System.Drawing.Point(311, 97);
-            this.lbslDon.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.lbslDon.Name = "lbslDon";
-            this.lbslDon.Size = new System.Drawing.Size(114, 44);
-            this.lbslDon.TabIndex = 117;
-            this.lbslDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tenNVt1
-            // 
-            this.tenNVt1.BorderColorFocused = System.Drawing.Color.Blue;
-            this.tenNVt1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tenNVt1.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.tenNVt1.BorderThickness = 3;
-            this.tenNVt1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tenNVt1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenNVt1.ForeColor = System.Drawing.Color.Black;
-            this.tenNVt1.isPassword = false;
-            this.tenNVt1.Location = new System.Drawing.Point(4, 303);
-            this.tenNVt1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.tenNVt1.Name = "tenNVt1";
-            this.tenNVt1.Size = new System.Drawing.Size(203, 57);
-            this.tenNVt1.TabIndex = 119;
-            this.tenNVt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lbnvdt
-            // 
-            this.lbnvdt.BorderColorFocused = System.Drawing.Color.Blue;
-            this.lbnvdt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbnvdt.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.lbnvdt.BorderThickness = 3;
-            this.lbnvdt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lbnvdt.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnvdt.ForeColor = System.Drawing.Color.Black;
-            this.lbnvdt.isPassword = false;
-            this.lbnvdt.Location = new System.Drawing.Point(300, 303);
-            this.lbnvdt.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.lbnvdt.Name = "lbnvdt";
-            this.lbnvdt.Size = new System.Drawing.Size(231, 57);
-            this.lbnvdt.TabIndex = 120;
-            this.lbnvdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // timer2
             // 
             this.timer2.Enabled = true;
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // bunifuCircleProgressbar1
-            // 
-            this.bunifuCircleProgressbar1.animated = true;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 40;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.Red;
-            this.bunifuCircleProgressbar1.LabelVisible = true;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(64, 309);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.Red;
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(163, 163);
-            this.bunifuCircleProgressbar1.TabIndex = 1;
-            this.bunifuCircleProgressbar1.Value = 45;
-            // 
-            // pnlchatkh
-            // 
-            this.pnlchatkh.Location = new System.Drawing.Point(105, 203);
-            this.pnlchatkh.Name = "pnlchatkh";
-            this.pnlchatkh.Size = new System.Drawing.Size(368, 391);
-            this.pnlchatkh.TabIndex = 118;
             // 
             // Main
             // 
@@ -1018,6 +1018,7 @@ namespace ThucTapCM
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1028,7 +1029,6 @@ namespace ThucTapCM
             ((System.ComponentModel.ISupportInitialize)(this.imgFace)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

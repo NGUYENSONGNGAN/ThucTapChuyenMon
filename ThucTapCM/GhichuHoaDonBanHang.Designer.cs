@@ -47,6 +47,7 @@ namespace ThucTapCM
             // 
             // txtghichu
             // 
+            this.txtghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtghichu.Location = new System.Drawing.Point(38, 80);
             this.txtghichu.Multiline = true;
             this.txtghichu.Name = "txtghichu";

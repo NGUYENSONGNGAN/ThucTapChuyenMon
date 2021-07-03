@@ -44,7 +44,7 @@ namespace ThucTapCM
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(231, 8);
+            this.label1.Location = new System.Drawing.Point(544, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(340, 43);
             this.label1.TabIndex = 152;
@@ -85,7 +85,7 @@ namespace ThucTapCM
             this.gvchayhang.EnableHeadersVisualStyles = false;
             this.gvchayhang.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.gvchayhang.HeaderForeColor = System.Drawing.Color.White;
-            this.gvchayhang.Location = new System.Drawing.Point(0, 54);
+            this.gvchayhang.Location = new System.Drawing.Point(0, 58);
             this.gvchayhang.Name = "gvchayhang";
             this.gvchayhang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -102,7 +102,7 @@ namespace ThucTapCM
             this.gvchayhang.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gvchayhang.RowTemplate.Height = 24;
             this.gvchayhang.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gvchayhang.Size = new System.Drawing.Size(800, 396);
+            this.gvchayhang.Size = new System.Drawing.Size(1420, 396);
             this.gvchayhang.TabIndex = 153;
             this.gvchayhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvchayhang_CellClick);
             // 
@@ -111,7 +111,7 @@ namespace ThucTapCM
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1420, 454);
             this.Controls.Add(this.gvchayhang);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

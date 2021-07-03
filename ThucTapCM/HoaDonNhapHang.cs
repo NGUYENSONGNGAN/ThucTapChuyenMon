@@ -461,7 +461,7 @@ namespace ThucTapCM
                 int maMau = Convert.ToInt32(xmamau.Rows[0]["MaMau"].ToString());
 
                 string deletegiohangN = "execute deletegiohangnhap1 @mahd , @masp , @macauhinh , @mamau ";
-                DataProvider.Instance.ExecuteNonQuery(deletegiohangN, new object[] { Convert.ToInt32(Convert.ToInt32(lbMHD.Text)), Convert.ToInt32(ma.ToString()), Convert.ToInt32(maCH.ToString()), Convert.ToInt32(maMau.ToString()) });
+                DataProvider.Instance.ExecuteNonQuery(deletegiohangN, new object[] { Convert.ToInt32(lbMHD.Text), Convert.ToInt32(ma.ToString()), Convert.ToInt32(maCH.ToString()), Convert.ToInt32(maMau.ToString()) });
 
                 MessageBox.Show("Delete Success !", "Success");
 
@@ -480,7 +480,7 @@ namespace ThucTapCM
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            this.Hide();
+            this.Close();
             main.Show();
         }
 

@@ -37,13 +37,11 @@ namespace ThucTapCM
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imgExit = new System.Windows.Forms.PictureBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -133,16 +131,6 @@ namespace ThucTapCM
             this.label2.TabIndex = 17;
             this.label2.Text = "Pass Word :";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ThucTapCM.Properties.Resources.logo51;
-            this.pictureBox5.Location = new System.Drawing.Point(697, 424);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(91, 50);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::ThucTapCM.Properties.Resources.key_1587108_1342081;
@@ -176,7 +164,7 @@ namespace ThucTapCM
             // imgExit
             // 
             this.imgExit.Image = ((System.Drawing.Image)(resources.GetObject("imgExit.Image")));
-            this.imgExit.Location = new System.Drawing.Point(735, 0);
+            this.imgExit.Location = new System.Drawing.Point(752, 0);
             this.imgExit.Name = "imgExit";
             this.imgExit.Size = new System.Drawing.Size(58, 44);
             this.imgExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +175,7 @@ namespace ThucTapCM
             // reportViewer1
             // 
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "ReportViewer";
+            this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(396, 246);
             this.reportViewer1.TabIndex = 0;
@@ -197,7 +185,6 @@ namespace ThucTapCM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(810, 507);
-            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPass);
@@ -213,7 +200,6 @@ namespace ThucTapCM
             this.Name = "txtPassWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -236,7 +222,6 @@ namespace ThucTapCM
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

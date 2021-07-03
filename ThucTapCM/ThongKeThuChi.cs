@@ -61,12 +61,15 @@ namespace ThucTapCM
                 string query = "execute DanhSachHDNTrongNam  @nam ";
                 DataTable DSHDN = DataProvider.Instance.ExecuteQuery(query, new object[] { Convert.ToInt32(cbxNam.SelectedValue) });
                 gvthuchi.DataSource = DSHDN;
+
+               
             }
             if (btrChi.Checked)
             {
                 string query = "execute DanhSachHDXtTrongNam  @nam ";
                 DataTable DSHDB = DataProvider.Instance.ExecuteQuery(query, new object[] { Convert.ToInt32(cbxNam.SelectedValue) });
                 gvthuchi.DataSource = DSHDB;
+               
             }
         }
 
@@ -240,7 +243,7 @@ namespace ThucTapCM
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            this.Hide();
+            this.Close();
             main.Show();
         }
     }

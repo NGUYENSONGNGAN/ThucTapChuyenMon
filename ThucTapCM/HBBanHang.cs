@@ -62,14 +62,21 @@ namespace ThucTapCM
             }
 
             string query1 = "execute selectKHHD1 '" + MKH + "'";
-            string name = DataProvider.Instance.ExecuteScalar(query1).ToString();
-            lbNameKH.Text = name;
+            DataTable name1 = DataProvider.Instance.ExecuteQuery(query1);
+            string name = name1.Rows[0]["TenKH"].ToString();
+            lbNameKH.Text = name.ToString();
+
             string query2 = "execute selectKHHD2 '" + MKH + "'";
-            string DiemTichLuy = DataProvider.Instance.ExecuteScalar(query2).ToString();
+            DataTable DiemTichLuy1 = DataProvider.Instance.ExecuteQuery(query2);
+            string DiemTichLuy = DiemTichLuy1.Rows[0]["DiemTichLuy"].ToString();
             lbDTL.Text = DiemTichLuy;
+
+
             string query3 = "execute selectKHHD3 '" + MKH + "'";
-            string loaikhachhang = DataProvider.Instance.ExecuteScalar(query3).ToString();
+            DataTable loaikhachhang1 = DataProvider.Instance.ExecuteQuery(query3);
+            string loaikhachhang = loaikhachhang1.Rows[0]["TenLKH"].ToString();
             lbLKH.Text = loaikhachhang;
+
             btnThanhToan.Enabled = false;
             gvSeachHD.Visible = false;
 
@@ -635,31 +642,31 @@ namespace ThucTapCM
         DateTime  newtime;
         void baohanh()
         {
-            String query = "select * from SanPham where MaSP = '"+Convert.ToInt32(cbxSanPham.SelectedValue)+"'";
-            DataTable HD = DataProvider.Instance.ExecuteQuery(query);
-            int tgbh = int.Parse(HD.Rows[0]["ThoiGianBH"].ToString());
-
-            String query1 = "select * from HoaDonBanHang where MaHD = '" + Convert.ToInt32(lbMHD.Text) + "'";
-            DataTable HD1 = DataProvider.Instance.ExecuteQuery(query1);
-            DateTime ngayxuat = DateTime.Parse(HD1.Rows[0]["NgayXuat"].ToString());
-            if (Convert.ToInt32(tgbh.ToString()) < 12)
-            {
-                DateTime aDateTime = Convert.ToDateTime(ngayxuat.ToString());
-                newtime = aDateTime.AddMonths(+Convert.ToInt32(tgbh.ToString()));
-            }
-            if (Convert.ToInt32(tgbh.ToString()) >= 12)
-            {
-                //int a = Convert.ToInt32(tgbh.ToString()) / 12;
-               // int b = Convert.ToInt32(tgbh.ToString()) % 12;
-                DateTime aDateTime = Convert.ToDateTime(ngayxuat.ToString());
-                newtime = aDateTime.AddMonths(+Convert.ToInt32(tgbh.ToString()));
-              //  newtime = aDateTime.AddYears(+Convert.ToInt32(a));
-            }
-
             string querygvm = "Select * from HDBH_SP Where MaHD = @mahd ";
             DataTable gvgiohang = DataProvider.Instance.ExecuteQuery(querygvm, new object[] { Convert.ToInt32(lbMHD.Text) });
             foreach (DataRow item in gvgiohang.Rows)
             {
+
+                String query = "select * from SanPham where MaSP = '" + Convert.ToInt32(item[1].ToString()) + "'";
+                DataTable HD = DataProvider.Instance.ExecuteQuery(query);
+                int tgbh = int.Parse(HD.Rows[0]["ThoiGianBH"].ToString());
+
+                String query1 = "select * from HoaDonBanHang where MaHD = '" + Convert.ToInt32(lbMHD.Text) + "'";
+                DataTable HD1 = DataProvider.Instance.ExecuteQuery(query1);
+                DateTime ngayxuat = DateTime.Parse(HD1.Rows[0]["NgayXuat"].ToString());
+                if (Convert.ToInt32(tgbh.ToString()) < 12)
+                {
+                    DateTime aDateTime = Convert.ToDateTime(ngayxuat.ToString());
+                    newtime = aDateTime.AddMonths(+Convert.ToInt32(tgbh.ToString()));
+                }
+                if (Convert.ToInt32(tgbh.ToString()) >= 12)
+                {
+                    //int a = Convert.ToInt32(tgbh.ToString()) / 12;
+                    // int b = Convert.ToInt32(tgbh.ToString()) % 12;
+                    DateTime aDateTime = Convert.ToDateTime(ngayxuat.ToString());
+                    newtime = aDateTime.AddMonths(+Convert.ToInt32(tgbh.ToString()));
+                    //  newtime = aDateTime.AddYears(+Convert.ToInt32(a));
+                }
 
                 DataProvider.Instance.ExecuteNonQuery("update TKTGBH set thoigianconlai = @tg where MaHDBH = @ma and masp = @masp and mach = @cauhinh and mamau = @tenmau", new object[] { Convert.ToDateTime(newtime), Convert.ToInt32(lbMHD.Text), Convert.ToInt32(item[1].ToString()), Convert.ToInt32(item[2].ToString()), Convert.ToInt32(item[3].ToString()) });
 

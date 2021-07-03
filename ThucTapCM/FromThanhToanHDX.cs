@@ -71,7 +71,7 @@ namespace ThucTapCM
                 if (a == DialogResult.Yes)
                 {
                     FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
-                    this.Hide();
+                    this.Close();
                     xuatHoaDonReport.Show();
                 }
             }else
@@ -79,11 +79,15 @@ namespace ThucTapCM
                 string udateHDB = "update HoaDonBanHang set TrangThai = 1 , GhiChu =  '" +Convert.ToString( txtghichu.Text) + "'where MaHD ='" + Convert.ToInt32(MHDBH) + "'";
                 DataProvider.Instance.ExecuteNonQuery(udateHDB);
                 FormXuatHoaDonReport xuatHoaDonReport = new FormXuatHoaDonReport();
-                this.Hide();
+                this.Close();
                 xuatHoaDonReport.Show();
             }
 
         }
-            
+
+        private void gvgiohang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

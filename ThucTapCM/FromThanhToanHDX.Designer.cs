@@ -95,6 +95,7 @@ namespace ThucTapCM
             this.gvgiohang.RowTemplate.Height = 24;
             this.gvgiohang.Size = new System.Drawing.Size(1528, 427);
             this.gvgiohang.TabIndex = 130;
+            this.gvgiohang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvgiohang_CellContentClick);
             // 
             // label8
             // 
@@ -173,6 +174,7 @@ namespace ThucTapCM
             // txtghichu
             // 
             this.txtghichu.BackColor = System.Drawing.Color.White;
+            this.txtghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtghichu.Location = new System.Drawing.Point(949, 187);
             this.txtghichu.Multiline = true;
             this.txtghichu.Name = "txtghichu";

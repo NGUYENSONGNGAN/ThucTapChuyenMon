@@ -61,6 +61,7 @@ namespace ThucTapCM
                 this.Hide();
                 main.Show();
                 moform = 0;
+                mahd = 0;
             } 
             else if(moform ==2)
             {
@@ -68,6 +69,7 @@ namespace ThucTapCM
                 this.Hide();
                 quetmaQR.Show();
                 moform = 0;
+                mahd = 0;
             } 
             else if(moform ==3)
             {
@@ -75,6 +77,7 @@ namespace ThucTapCM
                 this.Hide();
                 qLhoadonban.Show();
                 moform = 0;
+                mahd = 0;
             }    
         }
     }

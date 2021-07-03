@@ -110,9 +110,10 @@ namespace ThucTapCM
             // lbAdressNCC
             // 
             this.lbAdressNCC.AutoSize = true;
-            this.lbAdressNCC.Location = new System.Drawing.Point(170, 144);
+            this.lbAdressNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAdressNCC.Location = new System.Drawing.Point(150, 139);
             this.lbAdressNCC.Name = "lbAdressNCC";
-            this.lbAdressNCC.Size = new System.Drawing.Size(54, 17);
+            this.lbAdressNCC.Size = new System.Drawing.Size(82, 25);
             this.lbAdressNCC.TabIndex = 123;
             this.lbAdressNCC.Text = "label12";
             // 
@@ -147,9 +148,10 @@ namespace ThucTapCM
             // lbSĐT
             // 
             this.lbSĐT.AutoSize = true;
-            this.lbSĐT.Location = new System.Drawing.Point(539, 146);
+            this.lbSĐT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSĐT.Location = new System.Drawing.Point(512, 139);
             this.lbSĐT.Name = "lbSĐT";
-            this.lbSĐT.Size = new System.Drawing.Size(46, 17);
+            this.lbSĐT.Size = new System.Drawing.Size(70, 25);
             this.lbSĐT.TabIndex = 62;
             this.lbSĐT.Text = "label6";
             // 
@@ -177,7 +179,7 @@ namespace ThucTapCM
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(354, 139);
+            this.label5.Location = new System.Drawing.Point(336, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 24);
             this.label5.TabIndex = 59;
@@ -186,9 +188,9 @@ namespace ThucTapCM
             // pnsphet
             // 
             this.pnsphet.Controls.Add(this.lbDTL);
-            this.pnsphet.Location = new System.Drawing.Point(18, 223);
+            this.pnsphet.Location = new System.Drawing.Point(18, 219);
             this.pnsphet.Name = "pnsphet";
-            this.pnsphet.Size = new System.Drawing.Size(1420, 450);
+            this.pnsphet.Size = new System.Drawing.Size(1420, 454);
             this.pnsphet.TabIndex = 151;
             // 
             // lbDTL
@@ -203,20 +205,20 @@ namespace ThucTapCM
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(581, 87);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(501, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 24);
+            this.label2.Size = new System.Drawing.Size(208, 37);
             this.label2.TabIndex = 64;
             this.label2.Text = "Mã Hóa Đơn :";
             // 
             // lbMHD
             // 
             this.lbMHD.AutoSize = true;
-            this.lbMHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMHD.Location = new System.Drawing.Point(762, 87);
             this.lbMHD.Name = "lbMHD";
-            this.lbMHD.Size = new System.Drawing.Size(0, 25);
+            this.lbMHD.Size = new System.Drawing.Size(0, 32);
             this.lbMHD.TabIndex = 65;
             // 
             // label7
@@ -533,7 +535,7 @@ namespace ThucTapCM
             this.btnsphet.ButtonText = "Danh sách sản phẩm hết hàng";
             this.btnsphet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsphet.DisabledColor = System.Drawing.Color.Gray;
-            this.btnsphet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsphet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsphet.Iconcolor = System.Drawing.Color.Transparent;
             this.btnsphet.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnsphet.Iconimage")));
             this.btnsphet.Iconimage_right = null;

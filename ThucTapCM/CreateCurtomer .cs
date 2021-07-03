@@ -104,6 +104,7 @@ namespace ThucTapCM
 
         private void imgBack_Click(object sender, EventArgs e)
         {
+            MKHM = 0;
             HDBHMenu hDBH = new HDBHMenu();
             this.Hide();
             hDBH.Show();

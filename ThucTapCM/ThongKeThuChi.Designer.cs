@@ -158,7 +158,7 @@ namespace ThucTapCM
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1094, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(1106, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -218,14 +218,14 @@ namespace ThucTapCM
             this.gvthuchi.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gvthuchi.RowTemplate.Height = 24;
             this.gvthuchi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.gvthuchi.Size = new System.Drawing.Size(1149, 430);
+            this.gvthuchi.Size = new System.Drawing.Size(1149, 485);
             this.gvthuchi.TabIndex = 154;
             // 
             // ThongKeThuChi
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1149, 654);
+            this.ClientSize = new System.Drawing.Size(1149, 709);
             this.Controls.Add(this.gvthuchi);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);

@@ -79,7 +79,9 @@ namespace ThucTapCM
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Main main = new Main();
+            this.Hide();
+            main.Show();
         }
 
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)

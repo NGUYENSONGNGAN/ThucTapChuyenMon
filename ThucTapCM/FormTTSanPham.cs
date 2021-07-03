@@ -601,10 +601,9 @@ namespace ThucTapCM
             }
             else
             {
-                //erroByte[] image = (Byte[])cmd.ExecuteScalar( );;MemoryStream ms = new MemoryStream((byte[])tongtien.Rows[0]["MaQR"]);
-                // Image img = Image.FromStream(ms);
-                // pictQR.Image = img;
 
+                
+                
                 MemoryStream img = new MemoryStream((byte[])HA.Rows[0]["HinhAnh"]);
                 Image i = Image.FromStream(img);
                 if (i == null)

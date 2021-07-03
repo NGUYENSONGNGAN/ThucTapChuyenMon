@@ -61,7 +61,7 @@ namespace ThucTapCM
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ThucTapCM.Properties.Resources.d2ead876ae76ba7147f68e7d2417c5f3;
-            this.pictureBox1.Location = new System.Drawing.Point(713, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -231,7 +231,7 @@ namespace ThucTapCM
             // imgBack
             // 
             this.imgBack.Image = ((System.Drawing.Image)(resources.GetObject("imgBack.Image")));
-            this.imgBack.Location = new System.Drawing.Point(0, -3);
+            this.imgBack.Location = new System.Drawing.Point(722, 1);
             this.imgBack.Name = "imgBack";
             this.imgBack.Size = new System.Drawing.Size(77, 55);
             this.imgBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -259,6 +259,7 @@ namespace ThucTapCM
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateCurtomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateCurtomer";
             this.Load += new System.EventHandler(this.CreateCurtomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

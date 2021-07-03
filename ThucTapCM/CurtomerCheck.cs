@@ -53,6 +53,7 @@ namespace ThucTapCM
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            MKH = 0;
             HDBHMenu hDBH = new HDBHMenu();
             this.Hide();
             hDBH.Show();
