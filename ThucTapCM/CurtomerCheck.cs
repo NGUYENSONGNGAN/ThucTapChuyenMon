@@ -18,7 +18,7 @@ namespace ThucTapCM
         {
             InitializeComponent();
         }
-        public static int MKHC = 0;
+        public static int MKHC ;
 
         private void btnFind_Click(object sender, EventArgs e)
         {

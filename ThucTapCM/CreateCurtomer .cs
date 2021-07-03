@@ -16,7 +16,7 @@ namespace ThucTapCM
 {
     public partial class CreateCurtomer : Form
     {
-        static public int MKHM = 0;
+        static public int MKHM ;
         public CreateCurtomer()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace ThucTapCM
                 lbMKH.Text = Convert.ToString(Convert.ToInt32(r.ToString()) + 1);
                 // int a = Convert.ToInt32()
             }
-            MKHM = Convert.ToInt32((lbMKH.Text).ToString());
+            MKHM = Convert.ToInt32(lbMKH.Text);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace ThucTapCM
                             if (add >= 1)
                             {
                                 MessageBox.Show("Wellcome !", "Sucessful");
-                                HBBanHang HDBanHang = new HBBanHang();
+                                HBBanHang HDBanHang = new HBBanHang(Convert.ToInt32(lbMKH.Text));
                                 this.Hide();
                                 HDBanHang.Show();
                             }
