@@ -54,7 +54,7 @@ namespace ThucTapCM
 
 
                 MessageBox.Show("Hủy đơn thành công");
-                this.Close();
+                this.Hide();
                 Main main = new Main();
                 main.Show();
             }

@@ -33,9 +33,9 @@ namespace ChatKhachHang
                 {
 
 
-                    Form1 main = new Form1();
+                    TTKhachhang tTKhachhang = new TTKhachhang();
                     this.Hide();
-                    main.Show();
+                    tTKhachhang.Show();
                 }
 
             }

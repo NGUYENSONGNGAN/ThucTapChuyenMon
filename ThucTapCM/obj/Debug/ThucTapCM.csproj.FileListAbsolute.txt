@@ -120,3 +120,4 @@ D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.A
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.AHDXuat.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormTTKH.resources
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.FormXuatHoaDonReport.resources
+D:\Đồ án thực tập chuyên môn\ThucTapCM\ThucTapCM\obj\Debug\ThucTapCM.csprojAssemblyReference.cache
