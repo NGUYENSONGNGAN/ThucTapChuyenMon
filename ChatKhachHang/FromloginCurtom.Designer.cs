@@ -72,7 +72,7 @@ namespace ChatKhachHang
             this.txtphone.Location = new System.Drawing.Point(242, 270);
             this.txtphone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(214, 34);
+            this.txtphone.Size = new System.Drawing.Size(253, 34);
             this.txtphone.TabIndex = 20;
             this.txtphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -106,6 +106,7 @@ namespace ChatKhachHang
             this.imgExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgExit.TabIndex = 17;
             this.imgExit.TabStop = false;
+            this.imgExit.Click += new System.EventHandler(this.imgExit_Click);
             // 
             // btnLogin
             // 

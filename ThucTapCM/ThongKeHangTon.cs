@@ -14,13 +14,14 @@ namespace ThucTapCM
 {
     public partial class ThongKeHangTon : Form
     {
-    
 
+     
         public ThongKeHangTon()
         {
 
             InitializeComponent();
         }
+      
 
         private void cbxLoaisanpham_SelectedValueChanged(object sender, EventArgs e)
         {

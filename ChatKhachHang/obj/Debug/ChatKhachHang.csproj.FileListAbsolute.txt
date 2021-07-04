@@ -97,3 +97,4 @@ D:\Đồ án thực tập chuyên môn\ThucTapCM\ChatKhachHang\bin\Debug\DevExpr
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ChatKhachHang\bin\Debug\de\DevExpress.Data.v21.1.resources.dll
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ChatKhachHang\obj\Debug\RdlCompile.cache
 D:\Đồ án thực tập chuyên môn\ThucTapCM\ChatKhachHang\obj\Debug\RdlCompile.compiled
+D:\Đồ án thực tập chuyên môn\ThucTapCM\ChatKhachHang\obj\Debug\ChatKhachHang.TTKhachhang.resources

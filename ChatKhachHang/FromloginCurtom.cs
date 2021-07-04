@@ -24,8 +24,8 @@ namespace ChatKhachHang
             DataTable table = DataProvider.Instance.ExecuteQuery(query);
             if (table.Rows.Count == 1)
             {
-                id = int.Parse(table.Rows[0]["MaKH"].ToString());
-                string selectname = "select TenKH from KhachHang where  MaKH= '" + id + "' ";
+                id = Convert.ToInt32( table.Rows[0]["MaKH"].ToString());
+                string selectname = "select TenKH from KhachHang where  MaKH= '" + Convert.ToInt32(id.ToString()) + "' ";
                 string Ten = DataProvider.Instance.ExecuteScalar(selectname).ToString();
 
                 DialogResult a = MessageBox.Show("Bạn là '" + Ten.ToString() + "'?", "Login", MessageBoxButtons.YesNo);
@@ -33,7 +33,7 @@ namespace ChatKhachHang
                 {
 
 
-                    TTKhachhang tTKhachhang = new TTKhachhang();
+                    TTKhachhang tTKhachhang = new TTKhachhang(Convert.ToInt32(id.ToString()));
                     this.Hide();
                     tTKhachhang.Show();
                 }
@@ -43,6 +43,16 @@ namespace ChatKhachHang
             {
                 MessageBox.Show("check your phone!");
 
+            }
+        }
+
+        private void imgExit_Click(object sender, EventArgs e)
+        {
+            DialogResult rout = MessageBox.Show("Are you sure want to out ?", "out", MessageBoxButtons.YesNo);
+            if (rout == DialogResult.Yes)
+            {
+                Application.Exit();
+                return;
             }
         }
     }
