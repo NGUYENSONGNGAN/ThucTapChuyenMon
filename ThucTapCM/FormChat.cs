@@ -34,7 +34,7 @@ namespace ThucTapCM
             {
                 clientList = new List<Socket>();//khởi tạo 1 list nhiều client
                 //khởi tạo địa chỉ IP và socket để kết nối
-                IP = new IPEndPoint(IPAddress.Any, 2610);
+                IP = new IPEndPoint(IPAddress.Any, 1997);
                 server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
                 //đợi kết nối từ client
                 server.Bind(IP);
@@ -57,7 +57,7 @@ namespace ThucTapCM
                      chương trình ko bị crash*/
                     catch
                     {
-                        IP = new IPEndPoint(IPAddress.Any, 2610);
+                        IP = new IPEndPoint(IPAddress.Any, 1997);
                         server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
                     }
                 });

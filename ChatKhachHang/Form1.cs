@@ -32,7 +32,7 @@ namespace ChatKhachHang
             //ip địa chỉ của server
 
 
-            IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2610);
+            IP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1997);
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             try
