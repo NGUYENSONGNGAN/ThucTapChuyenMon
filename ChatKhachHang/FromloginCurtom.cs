@@ -45,5 +45,15 @@ namespace ChatKhachHang
 
             }
         }
+
+        private void imgExit_Click(object sender, EventArgs e)
+        {
+            DialogResult rout = MessageBox.Show("Are you sure want to out ?", "out", MessageBoxButtons.YesNo);
+            if (rout == DialogResult.Yes)
+            {
+                Application.Exit();
+                return;
+            }
+        }
     }
 }

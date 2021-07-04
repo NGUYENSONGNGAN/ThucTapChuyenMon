@@ -106,6 +106,7 @@ namespace ChatKhachHang
             this.imgExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgExit.TabIndex = 17;
             this.imgExit.TabStop = false;
+            this.imgExit.Click += new System.EventHandler(this.imgExit_Click);
             // 
             // btnLogin
             // 
