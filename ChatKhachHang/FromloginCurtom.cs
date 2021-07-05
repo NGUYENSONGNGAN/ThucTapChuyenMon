@@ -52,6 +52,7 @@ namespace ChatKhachHang
             if (rout == DialogResult.Yes)
             {
                 Application.Exit();
+
                 return;
             }
         }
