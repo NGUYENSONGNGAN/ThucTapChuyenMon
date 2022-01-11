@@ -3,12 +3,12 @@
 + Họ tên: Nguyễn Sông Ngân
 + Mã sinh viên: 5951071062
 + Lớp: Công nghệ thông tin K59
-## Đề tài: Quản lý cửa hàng bán đồ thể thao
+## Đề tài: Quản lý cửa hàng bán đồ điện tử
 ## Phần 1: Công nghệ sử dụng
-- Sử dụng C# Winform để quản lý cửa hàng bán đồ thể thao.
+- Sử dụng C# Winform để quản lý cửa hàng bán đồ điện tử.
 - Thiết kế cơ sở dữ liệu: Microsoft SQL Server Management Studio.
 - Môi trường phát triển tích hợp: Microsoft Visual Studio 2019.
-- Thư viện hỗ trợ: Bunifu framework, Guna framework, DevExpress
+- Thư viện hỗ trợ: Bunifu framework.
 ## Phần 2: Các chức năng đã hoàn thành
 Các chức năng đã hoàn thành bao gồm: 
 - Quản lý tài khoản: Cấp lại mật khẩu qua gmail, đổi mật khẩu
@@ -29,6 +29,7 @@ Các chức năng đã hoàn thành bao gồm:
 	+ Thống kê khách hàng: Thống kê các khách hàng đã mua gì, xuất file excel
 	+ Thống kê thu chi:  Thống kê thu / chi theo từng năm, xuất file excel
 	+ Thống kê tồn kho: Thống kê số lượng tồn của các sản phẩm theo loại, xuất file excel
+	+ Thống kê bảo hành : Thống kê thời gian bảo hành còn lại ,xóa sản phẩm gặp trục trặc trong quá trình bảo hành
 - Backup dữ liệu
 - Liên kết đến Facebook
 - Chat với khách hàng
